@@ -1,0 +1,10 @@
+21:43:29 **** Incremental Build of configuration Debug for project Push_Button ****
+make -j4 all 
+arm-none-eabi-size   Push_Button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6080	     20	   1572	   7672	   1df8	Push_Button.elf
+Finished building: default.size.stdout
+ 
+
+21:43:29 Build Finished. 0 errors, 0 warnings. (took 706ms)
+

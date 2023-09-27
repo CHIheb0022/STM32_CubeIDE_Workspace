@@ -1,0 +1,10 @@
+23:42:22 **** Incremental Build of configuration Debug for project Push_button_inter ****
+make -j4 all 
+arm-none-eabi-size   Push_button_inter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6216	     20	   1572	   7808	   1e80	Push_button_inter.elf
+Finished building: default.size.stdout
+ 
+
+23:42:23 Build Finished. 0 errors, 0 warnings. (took 486ms)
+

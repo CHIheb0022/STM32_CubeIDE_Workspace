@@ -1,0 +1,32 @@
+21:43:12 **** Incremental Build of configuration Debug for project Push_Button ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:27: error: 'GPIOa' undeclared (first use in this function); did you mean 'GPIOA'?
+   99 |         HAL_GPIO_WritePin(GPIOa, GPIO_PIN_5, GPIO_PIN_RESET);
+      |                           ^~~~~
+      |                           GPIOA
+../Core/Src/main.c:99:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:43:26 **** Incremental Build of configuration Debug for project Push_Button ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Push_Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\Push_Button\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Push_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Push_Button.elf
+ 
+arm-none-eabi-size   Push_Button.elf 
+arm-none-eabi-objdump -h -S  Push_Button.elf  > "Push_Button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6080	     20	   1572	   7672	   1df8	Push_Button.elf
+Finished building: default.size.stdout
+ 
+Finished building: Push_Button.list
+ 
+21:43:29 **** Incremental Build of configuration Debug for project Push_Button ****
+make -j4 all 
+arm-none-eabi-size   Push_Button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6080	     20	   1572	   7672	   1df8	Push_Button.elf
+Finished building: default.size.stdout
+ 
