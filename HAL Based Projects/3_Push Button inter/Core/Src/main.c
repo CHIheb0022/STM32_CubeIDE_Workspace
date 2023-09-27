@@ -106,7 +106,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   {
     // Your custom code to handle EXTI line 13 interrupt
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
-    HAL_Delay(500);
+    for(int i=0; i<10000; i++);// insert some delay in the ISR
   }
 }
 
