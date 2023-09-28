@@ -1,0 +1,17 @@
+00:08:42 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "7_Timer PWM Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\7_Timer PWM Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_Timer PWM Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7_Timer PWM Mode.elf
+ 
+arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
+arm-none-eabi-objdump -h -S  7_Timer\ PWM\ Mode.elf  > "7_Timer PWM Mode.list"
+   text	   data	    bss	    dec	    hex	filename
+  11528	     20	   1652	  13200	   3390	7_Timer PWM Mode.elf
+Finished building: default.size.stdout
+ 
+Finished building: 7_Timer PWM Mode.list
+ 
+
+00:08:43 Build Finished. 0 errors, 0 warnings. (took 1s.206ms)
+

@@ -1,0 +1,52 @@
+Configuration	6_Timer_Output Compare Mode
+STM32CubeMX 	6.8.1
+Date	09/28/2023
+MCU	STM32L476RGTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+TIM2	Output Compare CH1	TIM2_CH1	PA5
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+21	PA5	TIM2_CH1	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+TIM2	Output Compare CH1	TIM2_CH1	PA5
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+21	PA5	TIM2_CH1	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : 6_Timer_Output Compare Mode
+Project Folder : C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\6_Timer_Output Compare Mode
+Toolchain / IDE : STM32CubeIDE
+Firmware Package Name and Version : STM32Cube FW_L4 V1.17.2
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+
