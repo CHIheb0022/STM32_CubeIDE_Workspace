@@ -1,0 +1,10 @@
+13:54:13 **** Incremental Build of configuration Debug for project TP_EXTI ****
+make -j4 all 
+arm-none-eabi-size   TP_EXTI.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6272	     20	   1572	   7864	   1eb8	TP_EXTI.elf
+Finished building: default.size.stdout
+ 
+
+13:54:14 Build Finished. 0 errors, 0 warnings. (took 637ms)
+

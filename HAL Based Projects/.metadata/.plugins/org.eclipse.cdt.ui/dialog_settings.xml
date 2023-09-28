@@ -11,4 +11,12 @@
 		<item key="size.width" value="384"/>
 		<item key="size.height" value="180"/>
 	</section>
+	<section name="org.eclipse.cdt.internal.ui.text.QuickOutline">
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_WIDTH" value="350"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_HEIGHT" value="300"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_X_ORIGIN" value="637"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_Y_ORIGIN" value="300"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.cdt.internal.ui.text.COutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="true"/>
+	</section>
 </section>
