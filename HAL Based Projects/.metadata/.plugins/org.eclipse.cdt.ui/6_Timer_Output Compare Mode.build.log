@@ -1,0 +1,10 @@
+23:02:33 **** Incremental Build of configuration Debug for project 6_Timer_Output Compare Mode ****
+make -j4 all 
+arm-none-eabi-size   6_Timer_Output\ Compare\ Mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11080	     20	   1644	  12744	   31c8	6_Timer_Output Compare Mode.elf
+Finished building: default.size.stdout
+ 
+
+23:02:33 Build Finished. 0 errors, 0 warnings. (took 347ms)
+
