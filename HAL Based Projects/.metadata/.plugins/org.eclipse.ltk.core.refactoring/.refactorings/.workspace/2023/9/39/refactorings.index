@@ -3,3 +3,8 @@
 1695835601574	Rename resource 'Blink'
 1695835628263	Rename resource 'Push Button'
 1695835650591	Rename resource 'Push Button inter'
+1695857612113	Rename resource '3_Push Button inter'
+1695857635522	Rename resource '6_Timer_ Output campare Mode'
+1695857678002	Rename resource '6_Timer_ Output campare Mode _Failed'
+1695859198243	Delete resource '6_Timer_Output Compare Mode 2'
+1695859212823	Rename resource '6_Timer_ Output campare Mode'
