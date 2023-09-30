@@ -1,12 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Push_Button Debug,org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4_Debugging session Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4_Debugging session,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TP_EXTI Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:6_Timer_Output Compare Mode Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5_Timer_Delay Generation Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7_Timer PWM Mode Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Push_Button Debug,org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4_Debugging session Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4_Debugging session,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TP_EXTI Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:6_Timer_Output Compare Mode Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5_Timer_Delay Generation Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7_Timer PWM Mode Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:8_Timer_Input Capture Mode Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3_Push\ Button\ inter\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4_Debugging\ session/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4_Debugging\ session/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7_Timer\ PWM\ Mode\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:8_Timer\ Input\ Capture\ Mode\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:8_Timer_Input\ Capture\ Mode\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Blink\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Blink\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TP_EXTI\ Debug/activeLaunchMode=run

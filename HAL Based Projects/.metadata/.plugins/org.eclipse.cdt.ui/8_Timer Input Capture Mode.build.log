@@ -1,0 +1,10 @@
+20:42:35 **** Incremental Build of configuration Debug for project 8_Timer Input Capture Mode ****
+make -j4 all 
+arm-none-eabi-size   8_Timer\ Input\ Capture\ Mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13768	     20	   1748	  15536	   3cb0	8_Timer Input Capture Mode.elf
+Finished building: default.size.stdout
+ 
+
+20:42:35 Build Finished. 0 errors, 0 warnings. (took 613ms)
+
