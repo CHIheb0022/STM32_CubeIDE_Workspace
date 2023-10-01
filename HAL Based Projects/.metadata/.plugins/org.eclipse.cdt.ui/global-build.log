@@ -1,53 +1,21 @@
-22:38:55 **** Incremental Build of configuration Debug for project 8_Timer_Input Capture Mode ****
+01:58:35 **** Incremental Build of configuration Debug for project 10_USART Communication_Well Received ****
+make -j4 all 
+arm-none-eabi-size   10_USART\ Communication_Well\ Received.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15636	     20	   1708	  17364	   43d4	10_USART Communication_Well Received.elf
+Finished building: default.size.stdout
+ 
+02:00:02 **** Incremental Build of configuration Debug for project 10_USART Communication_Well Received ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
-arm-none-eabi-gcc -o "8_Timer_Input Capture Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\8_Timer_Input Capture Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_Timer_Input Capture Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 8_Timer_Input Capture Mode.elf
+arm-none-eabi-gcc -o "10_USART Communication_Well Received.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\10_USART Communication_Well Received\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_USART Communication_Well Received.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10_USART Communication_Well Received.elf
  
-arm-none-eabi-size   8_Timer_Input\ Capture\ Mode.elf 
-arm-none-eabi-objdump -h -S  8_Timer_Input\ Capture\ Mode.elf  > "8_Timer_Input Capture Mode.list"
+arm-none-eabi-size   10_USART\ Communication_Well\ Received.elf 
+arm-none-eabi-objdump -h -S  10_USART\ Communication_Well\ Received.elf  > "10_USART Communication_Well Received.list"
    text	   data	    bss	    dec	    hex	filename
-  13704	     20	   1748	  15472	   3c70	8_Timer_Input Capture Mode.elf
+  15636	     20	   1708	  17364	   43d4	10_USART Communication_Well Received.elf
 Finished building: default.size.stdout
  
-Finished building: 8_Timer_Input Capture Mode.list
- 
-22:39:02 **** Incremental Build of configuration Debug for project 8_Timer_Input Capture Mode ****
-make -j4 all 
-arm-none-eabi-size   8_Timer_Input\ Capture\ Mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13704	     20	   1748	  15472	   3c70	8_Timer_Input Capture Mode.elf
-Finished building: default.size.stdout
- 
-22:45:24 **** Incremental Build of configuration Debug for project 8_Timer_Input Capture Mode ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
-arm-none-eabi-gcc -o "8_Timer_Input Capture Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\8_Timer_Input Capture Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_Timer_Input Capture Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 8_Timer_Input Capture Mode.elf
- 
-arm-none-eabi-size   8_Timer_Input\ Capture\ Mode.elf 
-arm-none-eabi-objdump -h -S  8_Timer_Input\ Capture\ Mode.elf  > "8_Timer_Input Capture Mode.list"
-   text	   data	    bss	    dec	    hex	filename
-  13704	     20	   1748	  15472	   3c70	8_Timer_Input Capture Mode.elf
-Finished building: default.size.stdout
- 
-Finished building: 8_Timer_Input Capture Mode.list
- 
-22:46:57 **** Build of configuration Debug for project 7_Timer PWM Mode ****
-make -j4 all 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11528	     20	   1652	  13200	   3390	7_Timer PWM Mode.elf
-Finished building: default.size.stdout
- 
-22:48:09 **** Incremental Build of configuration Debug for project 8_Timer_Input Capture Mode ****
-make -j4 all 
-arm-none-eabi-size   8_Timer_Input\ Capture\ Mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-  13704	     20	   1748	  15472	   3c70	8_Timer_Input Capture Mode.elf
-Finished building: default.size.stdout
+Finished building: 10_USART Communication_Well Received.list
  
