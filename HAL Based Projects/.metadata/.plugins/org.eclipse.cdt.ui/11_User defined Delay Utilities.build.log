@@ -1,0 +1,67 @@
+01:21:15 **** Incremental Build of configuration Debug for project 11_User defined Delay Utilities ****
+make -j4 all 
+arm-none-eabi-gcc "../DelayUtility_LAB15/util/Timer_Delay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"DelayUtility_LAB15/util/Timer_Delay.d" -MT"DelayUtility_LAB15/util/Timer_Delay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "DelayUtility_LAB15/util/Timer_Delay.o"
+arm-none-eabi-gcc "../DelayUtility_LAB15/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"DelayUtility_LAB15/Src/main.d" -MT"DelayUtility_LAB15/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "DelayUtility_LAB15/Src/main.o"
+arm-none-eabi-gcc "../DelayUtility_LAB15/Src/stm32f1xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"DelayUtility_LAB15/Src/stm32f1xx_it.d" -MT"DelayUtility_LAB15/Src/stm32f1xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "DelayUtility_LAB15/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../DelayUtility_LAB15/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"DelayUtility_LAB15/Src/sysmem.d" -MT"DelayUtility_LAB15/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "DelayUtility_LAB15/Src/sysmem.o"
+../DelayUtility_LAB15/Src/sysmem.c:38:1: error: unknown type name 'caddr_t'
+   38 | caddr_t _sbrk(int incr)
+      | ^~~~~~~
+../DelayUtility_LAB15/Src/sysmem.c: In function '_sbrk':
+../DelayUtility_LAB15/Src/sysmem.c:51:25: error: 'caddr_t' undeclared (first use in this function)
+   51 |                 return (caddr_t) -1;
+      |                         ^~~~~~~
+../DelayUtility_LAB15/Src/sysmem.c:51:25: note: each undeclared identifier is reported only once for each function it appears in
+../DelayUtility_LAB15/Src/sysmem.c:56:25: error: expected ';' before 'prev_heap_end'
+   56 |         return (caddr_t) prev_heap_end;
+      |                         ^~~~~~~~~~~~~~
+      |                         ;
+../DelayUtility_LAB15/Src/sysmem.c:42:15: warning: variable 'prev_heap_end' set but not used [-Wunused-but-set-variable]
+   42 |         char *prev_heap_end;
+      |               ^~~~~~~~~~~~~
+../DelayUtility_LAB15/Src/sysmem.c:57:1: warning: control reaches end of non-void function [-Wreturn-type]
+   57 | }
+      | ^
+../DelayUtility_LAB15/util/Timer_Delay.c: In function 'TimerDelay_Init':
+../DelayUtility_LAB15/util/Timer_Delay.c:29:11: error: 'htim15' undeclared (first use in this function)
+   29 |           htim15.Instance = TIM15;
+      |           ^~~~~~
+../DelayUtility_LAB15/util/Timer_Delay.c:29:11: note: each undeclared identifier is reported only once for each function it appears in
+../DelayUtility_LAB15/Src/stm32f1xx_it.c:23:10: fatal error: stm32f1xx_it.h: No such file or directory
+   23 | #include "stm32f1xx_it.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [DelayUtility_LAB15/Src/subdir.mk:34: DelayUtility_LAB15/Src/sysmem.o] Error 1
+make: *** Waiting for unfinished jobs....
+../DelayUtility_LAB15/Src/main.c: In function 'SystemClock_Config':
+../DelayUtility_LAB15/Src/main.c:39:20: error: 'RCC_OscInitTypeDef' has no member named 'HSEPredivValue'
+   39 |   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+      |                    ^
+../DelayUtility_LAB15/util/Timer_Delay.c:38:13: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   38 |             Error_Handler();
+      |             ^~~~~~~~~~~~~
+make: *** [DelayUtility_LAB15/Src/subdir.mk:34: DelayUtility_LAB15/Src/stm32f1xx_it.o] Error 1
+../DelayUtility_LAB15/Src/main.c:39:38: error: 'RCC_HSE_PREDIV_DIV1' undeclared (first use in this function)
+   39 |   RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+      |                                      ^~~~~~~~~~~~~~~~~~~
+../DelayUtility_LAB15/Src/main.c:39:38: note: each undeclared identifier is reported only once for each function it appears in
+../DelayUtility_LAB15/Src/main.c:43:25: error: 'RCC_PLLInitTypeDef' has no member named 'PLLMUL'; did you mean 'PLLM'?
+   43 |   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+      |                         ^~~~~~
+      |                         PLLM
+../DelayUtility_LAB15/util/Timer_Delay.c:55:11: error: 'RCC_OscInitStruct' undeclared (first use in this function)
+   55 |           RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+      |           ^~~~~~~~~~~~~~~~~
+../DelayUtility_LAB15/Src/main.c:43:34: error: 'RCC_PLL_MUL9' undeclared (first use in this function); did you mean 'RCC_PLLMUL_3'?
+   43 |   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+      |                                  ^~~~~~~~~~~~
+      |                                  RCC_PLLMUL_3
+make: *** [DelayUtility_LAB15/Src/subdir.mk:34: DelayUtility_LAB15/Src/main.o] Error 1
+../DelayUtility_LAB15/util/Timer_Delay.c:67:11: error: 'RCC_ClkInitStruct' undeclared (first use in this function)
+   67 |           RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+      |           ^~~~~~~~~~~~~~~~~
+make: *** [DelayUtility_LAB15/util/subdir.mk:22: DelayUtility_LAB15/util/Timer_Delay.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+01:21:16 Build Failed. 16 errors, 3 warnings. (took 1s.163ms)
+

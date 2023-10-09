@@ -1,0 +1,10 @@
+01:16:11 **** Incremental Build of configuration Debug for project 12_UART with DMA ****
+make -j4 all 
+arm-none-eabi-size   12_UART\ with\ DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16812	     20	   1852	  18684	   48fc	12_UART with DMA.elf
+Finished building: default.size.stdout
+ 
+
+01:16:12 Build Finished. 0 errors, 0 warnings. (took 352ms)
+

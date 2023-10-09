@@ -102,6 +102,7 @@ int main(void)
 	HAL_UART_Receive_IT(&huart2, RX_buffer, 2);
 	if ((RX_buffer[0]=='h') && (RX_buffer[1]=='i')) {
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		HAL_Delay(1000);
 		RX_buffer[0]=0;
 		RX_buffer[1]=0;// To avoid toggle' in in a loop the Led. // we can not see it changing state
 	}

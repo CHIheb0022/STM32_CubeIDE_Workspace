@@ -1,0 +1,39 @@
+14:44:29 **** Build of configuration Debug for project 7SEG ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:46,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:99:
+../Core/Inc/stm32f4xx_hal_conf.h:283:12: fatal error: stm32f4xx_hal_exti.h: No such file or directory
+  283 |   #include "stm32f4xx_hal_exti.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:46,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:114:
+../Core/Inc/stm32f4xx_hal_conf.h:283:12: fatal error: stm32f4xx_hal_exti.h: No such file or directory
+  283 |   #include "stm32f4xx_hal_exti.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:46,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:56:
+../Core/Inc/stm32f4xx_hal_conf.h:283:12: fatal error: stm32f4xx_hal_exti.h: No such file or directory
+  283 |   #include "stm32f4xx_hal_exti.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:46,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:52:
+../Core/Inc/stm32f4xx_hal_conf.h:283:12: fatal error: stm32f4xx_hal_exti.h: No such file or directory
+  283 |   #include "stm32f4xx_hal_exti.h"
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+compilation terminated.
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:58: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:58: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:58: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o] Error 1
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:58: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+14:44:29 Build Failed. 9 errors, 0 warnings. (took 846ms)
+
