@@ -90,6 +90,8 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_UART_Receive_IT(&huart2, RX_Buffer, sizeof(RX_Buffer));// We use the EXTI to receive the data once the exception is triggered avoiding
+  //polling the register status (this tracking task is handled by the CPU)
 
   /* USER CODE END 2 */
 
@@ -100,15 +102,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	HAL_UART_Receive_IT(&huart2, RX_Buffer, 2);// We use the EXTI to receive the data once the exception is triggered avoiding
-	//polling the register status (this tracking task is handled by the CPU)
-	//Toggle the LED if we receive the 'hi' message
-	if ((RX_Buffer[0]=='H') && (RX_Buffer[1]=='I')) {
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		HAL_Delay(1000);
-		RX_Buffer[0]=0;
-		RX_Buffer[1]=0;// To avoid toggle' in in a loop the Led. // we can not see it changing state
-	}
+
   }
   /* USER CODE END 3 */
 }
@@ -173,7 +167,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -223,7 +217,13 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  HAL_UART_Receive_IT(&huart2, RX_Buffer, 2); //You need to toggle a breakpoint on this line!
+  HAL_UART_Receive_IT(&huart2, RX_Buffer, sizeof(RX_Buffer)); //You need to toggle a breakpoint on this line!
+  //Toggle the LED if we receive the 'hi' message
+  if ((RX_Buffer[0]=='H') && (RX_Buffer[1]=='I')) {
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		RX_Buffer[0]=0;
+		RX_Buffer[1]=0;// To avoid toggle' in in a loop the Led. // we can not see it changing state
+	}
 }
 /* USER CODE END 4 */
 

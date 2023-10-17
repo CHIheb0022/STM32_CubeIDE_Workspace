@@ -76,7 +76,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -94,6 +94,8 @@ int main(void)
   MX_DMA_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_UART_Receive_DMA(&huart2, RX_Buffer, 2);// We use the DMA to receive the data directly from the UART peripheral (peripheral -> memory)
+  //Preventing the CPU intervention (offload the CPU to perform other tasks).
 
   /* USER CODE END 2 */
 
@@ -104,15 +106,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	HAL_UART_Receive_DMA(&huart2, RX_Buffer, 2);// We use the DMA to receive the data directly from the UART peripheral (peripheral -> memory)
-	//Preventing the CPU intervention (offload the CPU to perform other tasks).
-	//Toggle the LED if we receive the 'hi' message
-	if ((RX_Buffer[0]=='H') && (RX_Buffer[1]=='I')) {
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		HAL_Delay(1000);
-		RX_Buffer[0]=0;
-		RX_Buffer[1]=0;// To avoid toggle' in in a loop the Led. // we can not see it changing state
-	}
 
 
   /* USER CODE END 3 */
@@ -248,7 +241,13 @@ void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 
-	HAL_UART_Receive_DMA(&huart2, RX_Buffer, 10); //You need to toggle a breakpoint on this line!
+	HAL_UART_Receive_DMA(&huart2, RX_Buffer, 2); //You need to toggle a breakpoint on this line!
+	//Toggle the LED if we receive the 'HI' message
+	if ((RX_Buffer[0]=='H') && (RX_Buffer[1]=='I')) {
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		RX_Buffer[0]=0;
+		RX_Buffer[1]=0;// To avoid toggle' in in a loop the Led. // we can not see it changing state
+	}
 }
 /* USER CODE END 4 */
 
