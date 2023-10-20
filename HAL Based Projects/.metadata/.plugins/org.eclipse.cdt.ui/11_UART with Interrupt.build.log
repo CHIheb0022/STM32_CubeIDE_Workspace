@@ -1,17 +1,10 @@
-17:50:40 **** Incremental Build of configuration Debug for project 11_UART with Interrupt ****
+21:07:24 **** Build of configuration Debug for project 11_UART with Interrupt ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "11_UART with Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\11_UART with Interrupt\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_UART with Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 11_UART with Interrupt.elf
- 
 arm-none-eabi-size   11_UART\ with\ Interrupt.elf 
-arm-none-eabi-objdump -h -S  11_UART\ with\ Interrupt.elf  > "11_UART with Interrupt.list"
    text	   data	    bss	    dec	    hex	filename
   15624	     20	   1708	  17352	   43c8	11_UART with Interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 11_UART with Interrupt.list
- 
 
-17:50:41 Build Finished. 0 errors, 0 warnings. (took 1s.243ms)
+21:07:25 Build Finished. 0 errors, 0 warnings. (took 379ms)
 

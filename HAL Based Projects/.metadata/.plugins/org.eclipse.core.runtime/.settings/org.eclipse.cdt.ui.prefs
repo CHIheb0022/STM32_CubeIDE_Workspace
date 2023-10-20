@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+markOccurrences=false
 org.eclipse.cdt.ui.outline.groupmembers=true
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true

@@ -1,4 +1,4 @@
-23:03:30 **** Incremental Build of configuration Debug for project 5_Timer_Delay Generation ****
+21:07:50 **** Build of configuration Debug for project 5_Timer_Delay Generation ****
 make -j4 all 
 arm-none-eabi-size   5_Timer_Delay\ Generation.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   5_Timer_Delay\ Generation.elf
 Finished building: default.size.stdout
  
 
-23:03:31 Build Finished. 0 errors, 0 warnings. (took 377ms)
+21:07:51 Build Finished. 0 errors, 0 warnings. (took 623ms)
 

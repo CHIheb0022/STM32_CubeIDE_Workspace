@@ -383,11 +383,11 @@ int main(void)
  80004d0:	f000 f88c 	bl	80005ec <MX_GPIO_Init>
   MX_USART2_UART_Init();
  80004d4:	f000 f85a 	bl	800058c <MX_USART2_UART_Init>
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
+
+	/* USER CODE BEGIN 3 */
 	HAL_UART_Transmit(&huart2, Buffer, len, 10); //HAL_UART_Transmit(& usart_handler, data, data lenght, Timeout);
  80004d8:	4b06      	ldr	r3, [pc, #24]	; (80004f4 <main+0x30>)
  80004da:	681b      	ldr	r3, [r3, #0]

@@ -115,8 +115,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   //Start Timer count
-  HAL_TIM_OC_Start(&htim2, TIM_CHANNEL_2);
- 80001dc:	2104      	movs	r1, #4
+  HAL_TIM_OC_Start(&htim2, TIM_CHANNEL_1);
+ 80001dc:	2100      	movs	r1, #0
  80001de:	4802      	ldr	r0, [pc, #8]	; (80001e8 <main+0x20>)
  80001e0:	f001 fbe8 	bl	80019b4 <HAL_TIM_OC_Start>
 
