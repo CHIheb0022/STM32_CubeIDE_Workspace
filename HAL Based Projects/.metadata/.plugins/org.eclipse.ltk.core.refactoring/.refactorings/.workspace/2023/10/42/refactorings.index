@@ -3,3 +3,5 @@
 1697541228216	Rename resource '14_ADC Polling Mode (LED Dimmer)'
 1697541482009	Delete resource '14_ADC Polling Mode _ LED Dimmer'
 1697568722285	Delete resource '14_ADC Polling Mode _ LED Dimmer'
+1697808538628	Rename resource '15_SPI Master Transmitter_Interrupt Mode'
+1697808568791	Rename resource '15_SPI Slave Receiver_interrupt Mode'
