@@ -1,0 +1,10 @@
+10:58:37 **** Incremental Build of configuration Debug for project 14_ADC_Tem_sensor ****
+make -j4 all 
+arm-none-eabi-size   14_ADC_Tem_sensor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16744	     20	   1804	  18568	   4888	14_ADC_Tem_sensor.elf
+Finished building: default.size.stdout
+ 
+
+10:58:37 Build Finished. 0 errors, 0 warnings. (took 482ms)
+

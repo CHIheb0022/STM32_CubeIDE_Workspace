@@ -1,0 +1,2 @@
+../LM35/LM35.c:21:6:LM35_Init	32	static
+../LM35/LM35.c:60:7:LM35_Read	24	static
