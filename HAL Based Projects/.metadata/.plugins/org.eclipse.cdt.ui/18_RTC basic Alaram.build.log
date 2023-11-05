@@ -1,0 +1,10 @@
+05:06:04 **** Incremental Build of configuration Debug for project 18_RTC basic Alaram ****
+make -j4 all 
+arm-none-eabi-size   18_RTC\ basic\ Alaram.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11436	     20	   1604	  13060	   3304	18_RTC basic Alaram.elf
+Finished building: default.size.stdout
+ 
+
+05:06:05 Build Finished. 0 errors, 0 warnings. (took 572ms)
+
