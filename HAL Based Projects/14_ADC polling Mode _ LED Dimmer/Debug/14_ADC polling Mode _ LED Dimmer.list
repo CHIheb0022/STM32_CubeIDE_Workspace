@@ -131,8 +131,8 @@ int main(void)
  80001f0:	480f      	ldr	r0, [pc, #60]	; (8000230 <main+0x68>)
  80001f2:	f000 febf 	bl	8000f74 <HAL_ADC_Start>
     // Poll ADC1 Perihperal & TimeOut = 1mSec
-    HAL_ADC_PollForConversion(&hadc1, 10);
- 80001f6:	210a      	movs	r1, #10
+    HAL_ADC_PollForConversion(&hadc1, 5);
+ 80001f6:	2105      	movs	r1, #5
  80001f8:	480d      	ldr	r0, [pc, #52]	; (8000230 <main+0x68>)
  80001fa:	f000 ff75 	bl	80010e8 <HAL_ADC_PollForConversion>
     // Read The ADC Conversion Result & Map It To PWM DutyCycle
@@ -156,8 +156,8 @@ int main(void)
  800021e:	461a      	mov	r2, r3
  8000220:	4b05      	ldr	r3, [pc, #20]	; (8000238 <main+0x70>)
  8000222:	601a      	str	r2, [r3, #0]
-    HAL_Delay(10);
- 8000224:	200a      	movs	r0, #10
+    HAL_Delay(5);
+ 8000224:	2005      	movs	r0, #5
  8000226:	f000 fb21 	bl	800086c <HAL_Delay>
     HAL_ADC_Start(&hadc1);
  800022a:	e7e1      	b.n	80001f0 <main+0x28>

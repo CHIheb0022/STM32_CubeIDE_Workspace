@@ -111,12 +111,12 @@ int main(void)
     // Start ADC Conversion
     HAL_ADC_Start(&hadc1);
     // Poll ADC1 Perihperal & TimeOut = 1mSec
-    HAL_ADC_PollForConversion(&hadc1, 10);
+    HAL_ADC_PollForConversion(&hadc1, 5);
     // Read The ADC Conversion Result & Map It To PWM DutyCycle
     ADC_RES = HAL_ADC_GetValue(&hadc1);
     TIM2->CCR1 = (ADC_RES<<10);
     k=(ADC_RES<<10);
-    HAL_Delay(10);
+    HAL_Delay(5);
   }
   /* USER CODE END 3 */
 }
