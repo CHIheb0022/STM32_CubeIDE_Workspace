@@ -39,9 +39,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  000153fc  00000000  00000000  00030595  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000dae1  00000000  00000000  00045991  2**0
+ 18 .debug_line   0000dae0  00000000  00000000  00045991  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00086e72  00000000  00000000  00053472  2**0
+ 19 .debug_str    00086e72  00000000  00000000  00053471  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  20 .debug_frame  000025a8  00000000  00000000  000da2e4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -775,18 +775,21 @@ int main(void)
  800062c:	f000 f86c 	bl	8000708 <MX_SPI1_Init>
   MX_USART1_UART_Init();
  8000630:	f000 f8a6 	bl	8000780 <MX_USART1_UART_Init>
-  while (1)
-  {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-	HAL_SPI_Receive_IT(&hspi1, RX_buffer,sizeof(RX_buffer));
+  /* USER CODE BEGIN 2 */
+  //First reception
+  HAL_SPI_Receive_IT(&hspi1, RX_buffer,sizeof(RX_buffer));
  8000634:	4903      	ldr	r1, [pc, #12]	; (8000644 <main+0x28>)
  8000636:	4b04      	ldr	r3, [pc, #16]	; (8000648 <main+0x2c>)
  8000638:	2202      	movs	r2, #2
  800063a:	0018      	movs	r0, r3
  800063c:	f001 fcee 	bl	800201c <HAL_SPI_Receive_IT>
- 8000640:	e7f8      	b.n	8000634 <main+0x18>
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+ 8000640:	e7fe      	b.n	8000640 <main+0x24>
  8000642:	46c0      	nop			; (mov r8, r8)
  8000644:	20000120 	.word	0x20000120
  8000648:	20000028 	.word	0x20000028
@@ -1184,11 +1187,13 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+//The routine in the Callback function will be repeated at each 2 bytes frame.
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
  8000860:	b580      	push	{r7, lr}
  8000862:	b082      	sub	sp, #8
  8000864:	af00      	add	r7, sp, #0
  8000866:	6078      	str	r0, [r7, #4]
+	//Move the received data to a buffer with the same size as the transmitted data "Hello world !"(13)
 	RX_data[pos]=RX_buffer[0];
  8000868:	4b13      	ldr	r3, [pc, #76]	; (80008b8 <HAL_SPI_RxCpltCallback+0x58>)
  800086a:	681b      	ldr	r3, [r3, #0]
@@ -1210,12 +1215,14 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
  8000886:	1c9a      	adds	r2, r3, #2
  8000888:	4b0b      	ldr	r3, [pc, #44]	; (80008b8 <HAL_SPI_RxCpltCallback+0x58>)
  800088a:	601a      	str	r2, [r3, #0]
+	//Send the data to the UART port of the PC in order to monitor the message in the Realterm console
 	HAL_UART_Transmit(&huart1, RX_buffer, sizeof(RX_buffer), 1);
  800088c:	490b      	ldr	r1, [pc, #44]	; (80008bc <HAL_SPI_RxCpltCallback+0x5c>)
  800088e:	480d      	ldr	r0, [pc, #52]	; (80008c4 <HAL_SPI_RxCpltCallback+0x64>)
  8000890:	2301      	movs	r3, #1
  8000892:	2202      	movs	r2, #2
  8000894:	f002 fa62 	bl	8002d5c <HAL_UART_Transmit>
+	//Clear RX_buffer to receive the next frame.
 	RX_buffer[0]=0;
  8000898:	4b08      	ldr	r3, [pc, #32]	; (80008bc <HAL_SPI_RxCpltCallback+0x5c>)
  800089a:	2200      	movs	r2, #0
@@ -1224,7 +1231,8 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi){
  800089e:	4b07      	ldr	r3, [pc, #28]	; (80008bc <HAL_SPI_RxCpltCallback+0x5c>)
  80008a0:	2200      	movs	r2, #0
  80008a2:	705a      	strb	r2, [r3, #1]
-	HAL_SPI_Receive_IT(&hspi1, RX_buffer, sizeof(RX_buffer));
+	//One the first reception is done we move to the second one and repeat the process above and so one for the rest of the data.
+	HAL_SPI_Receive_IT(&hspi1, RX_buffer, sizeof(RX_buffer));//This line will move the program to the clpt function again.
  80008a4:	4905      	ldr	r1, [pc, #20]	; (80008bc <HAL_SPI_RxCpltCallback+0x5c>)
  80008a6:	4b08      	ldr	r3, [pc, #32]	; (80008c8 <HAL_SPI_RxCpltCallback+0x68>)
  80008a8:	2202      	movs	r2, #2

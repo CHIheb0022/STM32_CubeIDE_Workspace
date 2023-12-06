@@ -43,6 +43,7 @@
 SPI_HandleTypeDef hspi1;
 
 /* USER CODE BEGIN PV */
+uint8_t Tx_data[13]= "Hello world !";
 
 /* USER CODE END PV */
 
@@ -89,7 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  uint8_t Tx_data[13]= "Hello world !";
+
 
   /* USER CODE END 2 */
 
