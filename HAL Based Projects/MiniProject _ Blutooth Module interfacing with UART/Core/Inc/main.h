@@ -31,6 +31,14 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+void Front_Light_Toggle();
+void Back_Light_Toggle();
+void Turn_Left();
+void Turn_Right();
+void Stop();
+void Range_to_obstacle();
+void ServoA_Speed_Calibration();
+void ServoB_Speed_Calibration();
 
 /* USER CODE END Includes */
 

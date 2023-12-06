@@ -1,0 +1,8 @@
+../Src/main.c:84:5:main	8	static
+../Src/main.c:131:6:SystemClock_Config	96	static
+../Src/main.c:182:13:MX_USART1_UART_Init	8	static
+../Src/main.c:217:13:MX_USART2_UART_Init	8	static
+../Src/main.c:252:13:MX_GPIO_Init	32	static
+../Src/main.c:277:6:HAL_UART_RxCpltCallback	16	static
+../Src/main.c:329:6:Front_Light_Toggle	4	static
+../Src/main.c:340:6:Error_Handler	4	static,ignoring_inline_asm

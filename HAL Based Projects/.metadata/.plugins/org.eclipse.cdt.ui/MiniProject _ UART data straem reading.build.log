@@ -1,0 +1,17 @@
+12:23:50 **** Incremental Build of configuration Debug for project MiniProject _ UART data straem reading ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "MiniProject _ UART data straem reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data straem reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data straem reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MiniProject _ UART data straem reading.elf
+ 
+arm-none-eabi-size   MiniProject\ _\ UART\ data\ straem\ reading.elf 
+arm-none-eabi-objdump -h -S  MiniProject\ _\ UART\ data\ straem\ reading.elf  > "MiniProject _ UART data straem reading.list"
+   text	   data	    bss	    dec	    hex	filename
+  15668	     20	   1708	  17396	   43f4	MiniProject _ UART data straem reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: MiniProject _ UART data straem reading.list
+ 
+
+12:23:52 Build Finished. 0 errors, 0 warnings. (took 1s.734ms)
+

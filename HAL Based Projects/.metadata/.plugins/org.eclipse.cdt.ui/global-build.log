@@ -1,14 +1,21 @@
-00:59:08 **** Build of configuration Debug for project 16_SPI Slave Receiver_interrupt Mode ****
+15:43:39 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G031xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "16_SPI Slave Receiver_interrupt Mode.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\16_SPI Slave Receiver_interrupt Mode\STM32G031J6MX_FLASH.ld" --specs=nosys.specs -Wl,-Map="16_SPI Slave Receiver_interrupt Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 16_SPI Slave Receiver_interrupt Mode.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'Front_Light_Toggle':
+../Src/main.c:330:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  330 |         return 0;
+      |                ^
+../Src/main.c:329:6: note: declared here
+  329 | void Front_Light_Toggle(){
+      |      ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "MiniProject _ UART data stream reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data stream reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data stream reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MiniProject _ UART data stream reading.elf
  
-arm-none-eabi-size   16_SPI\ Slave\ Receiver_interrupt\ Mode.elf 
-arm-none-eabi-objdump -h -S  16_SPI\ Slave\ Receiver_interrupt\ Mode.elf  > "16_SPI Slave Receiver_interrupt Mode.list"
+arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
+arm-none-eabi-objdump -h -S  MiniProject\ _\ UART\ data\ stream\ reading.elf  > "MiniProject _ UART data stream reading.list"
    text	   data	    bss	    dec	    hex	filename
-  14924	     20	   1844	  16788	   4194	16_SPI Slave Receiver_interrupt Mode.elf
+  15984	     20	   1836	  17840	   45b0	MiniProject _ UART data stream reading.elf
 Finished building: default.size.stdout
  
-Finished building: 16_SPI Slave Receiver_interrupt Mode.list
+Finished building: MiniProject _ UART data stream reading.list
  
