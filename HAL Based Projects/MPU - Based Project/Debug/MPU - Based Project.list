@@ -1102,7 +1102,7 @@ void MPU6050_Init(void){
  8000bb8:	2201      	movs	r2, #1
  8000bba:	601a      	str	r2, [r3, #0]
 
-		Data = 0;
+		Data = 0x00;
  8000bbc:	2300      	movs	r3, #0
  8000bbe:	71bb      	strb	r3, [r7, #6]
 		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, PWR_MGMT_1_REG, 1,&Data, 1, 1000);

@@ -1,10 +1,10 @@
-01:00:54 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+00:01:55 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
 make -j4 all 
 arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
    text	   data	    bss	    dec	    hex	filename
-  15984	     20	   1836	  17840	   45b0	MiniProject _ UART data stream reading.elf
+  24132	     20	   1908	  26060	   65cc	MiniProject _ UART data stream reading.elf
 Finished building: default.size.stdout
  
 
-01:00:55 Build Finished. 0 errors, 0 warnings. (took 505ms)
+00:01:56 Build Finished. 0 errors, 0 warnings. (took 382ms)
 
