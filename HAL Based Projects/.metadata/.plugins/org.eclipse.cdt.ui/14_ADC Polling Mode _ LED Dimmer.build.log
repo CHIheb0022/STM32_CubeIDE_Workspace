@@ -1,4 +1,4 @@
-23:54:32 **** Incremental Build of configuration Debug for project 14_ADC polling Mode _ LED Dimmer ****
+01:00:21 **** Build of configuration Debug for project 14_ADC polling Mode _ LED Dimmer ****
 make -j4 all 
 arm-none-eabi-size   14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf
 Finished building: default.size.stdout
  
 
-23:54:32 Build Finished. 0 errors, 0 warnings. (took 458ms)
+01:00:22 Build Finished. 0 errors, 0 warnings. (took 515ms)
 

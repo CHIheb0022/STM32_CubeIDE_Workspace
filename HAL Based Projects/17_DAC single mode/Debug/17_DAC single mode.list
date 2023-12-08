@@ -133,7 +133,7 @@ int main(void)
  80001f4:	443b      	add	r3, r7
  80001f6:	f853 3c14 	ldr.w	r3, [r3, #-20]
  80001fa:	6093      	str	r3, [r2, #8]
-	DOR_val = DAC1->DOR1;
+	DOR_val = DAC1->DOR1; // The DOR_val is used to view in live expression the data been transfered to the DOR1 register
  80001fc:	4b0b      	ldr	r3, [pc, #44]	; (800022c <main+0x64>)
  80001fe:	6adb      	ldr	r3, [r3, #44]	; 0x2c
  8000200:	4a0b      	ldr	r2, [pc, #44]	; (8000230 <main+0x68>)

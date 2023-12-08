@@ -1,0 +1,8 @@
+../Core/Src/main.c:87:5:main	1
+../Core/Src/main.c:136:6:SystemClock_Config	4
+../Core/Src/main.c:186:13:MX_I2C1_Init	4
+../Core/Src/main.c:234:13:MX_GPIO_Init	1
+../Core/Src/main.c:248:6:MPU6050_Init	2
+../Core/Src/main.c:275:6:MPU6050_Read_Accel	1
+../Core/Src/main.c:303:6:MPU6050_Read_Gyro	1
+../Core/Src/main.c:340:6:Error_Handler	1

@@ -1,21 +1,82 @@
-15:43:39 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+01:48:01 **** Incremental Build of configuration Debug for project MPU - Based Project ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'Front_Light_Toggle':
-../Src/main.c:330:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
-  330 |         return 0;
-      |                ^
-../Src/main.c:329:6: note: declared here
-  329 | void Front_Light_Toggle(){
-      |      ^~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "MiniProject _ UART data stream reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data stream reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data stream reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniProject _ UART data stream reading.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MPU - Based Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MPU - Based Project\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU - Based Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU - Based Project.elf
  
-arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
-arm-none-eabi-objdump -h -S  MiniProject\ _\ UART\ data\ stream\ reading.elf  > "MiniProject _ UART data stream reading.list"
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+arm-none-eabi-objdump -h -S  MPU\ -\ Based\ Project.elf  > "MPU - Based Project.list"
    text	   data	    bss	    dec	    hex	filename
-  15984	     20	   1836	  17840	   45b0	MiniProject _ UART data stream reading.elf
+  14472	     20	   1684	  16176	   3f30	MPU - Based Project.elf
 Finished building: default.size.stdout
  
-Finished building: MiniProject _ UART data stream reading.list
+Finished building: MPU - Based Project.list
+ 
+01:48:07 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14472	     20	   1684	  16176	   3f30	MPU - Based Project.elf
+Finished building: default.size.stdout
+ 
+01:48:41 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14472	     20	   1684	  16176	   3f30	MPU - Based Project.elf
+Finished building: default.size.stdout
+ 
+01:52:00 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'MPU6050_Init':
+../Core/Src/main.c:46:27: error: called object is not a function or function pointer
+   46 | #define WHO_AM_I_RESPONDE 0x20 (32)
+      |                           ^~~~
+../Core/Src/main.c:254:22: note: in expansion of macro 'WHO_AM_I_RESPONDE'
+  254 |         if (check == WHO_AM_I_RESPONDE) {// if the device is present
+      |                      ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:52:42 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MPU - Based Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MPU - Based Project\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU - Based Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU - Based Project.elf
+ 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+arm-none-eabi-objdump -h -S  MPU\ -\ Based\ Project.elf  > "MPU - Based Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  14448	     20	   1684	  16152	   3f18	MPU - Based Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU - Based Project.list
+ 
+01:53:52 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14448	     20	   1684	  16152	   3f18	MPU - Based Project.elf
+Finished building: default.size.stdout
+ 
+01:56:19 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MPU - Based Project.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MPU - Based Project\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU - Based Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU - Based Project.elf
+ 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+arm-none-eabi-objdump -h -S  MPU\ -\ Based\ Project.elf  > "MPU - Based Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  14528	     20	   1684	  16232	   3f68	MPU - Based Project.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU - Based Project.list
+ 
+01:57:32 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14528	     20	   1684	  16232	   3f68	MPU - Based Project.elf
+Finished building: default.size.stdout
  

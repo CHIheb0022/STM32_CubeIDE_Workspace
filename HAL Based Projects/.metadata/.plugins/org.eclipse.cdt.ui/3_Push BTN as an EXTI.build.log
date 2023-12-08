@@ -1,4 +1,4 @@
-13:38:13 **** Incremental Build of configuration Debug for project 3_Push BTN as an EXTI ****
+01:00:39 **** Build of configuration Debug for project 3_Push BTN as an EXTI ****
 make -j4 all 
 arm-none-eabi-size   3_Push\ BTN\ as\ an\ EXTI.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   3_Push\ BTN\ as\ an\ EXTI.elf
 Finished building: default.size.stdout
  
 
-13:38:13 Build Finished. 0 errors, 0 warnings. (took 419ms)
+01:00:40 Build Finished. 0 errors, 0 warnings. (took 730ms)
 

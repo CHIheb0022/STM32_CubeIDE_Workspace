@@ -1,0 +1,10 @@
+01:57:32 **** Incremental Build of configuration Debug for project MPU - Based Project ****
+make -j4 all 
+arm-none-eabi-size   MPU\ -\ Based\ Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14528	     20	   1684	  16232	   3f68	MPU - Based Project.elf
+Finished building: default.size.stdout
+ 
+
+01:57:33 Build Finished. 0 errors, 0 warnings. (took 434ms)
+

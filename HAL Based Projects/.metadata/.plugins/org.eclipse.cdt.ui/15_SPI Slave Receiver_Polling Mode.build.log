@@ -1,17 +1,10 @@
-22:06:14 **** Incremental Build of configuration Debug for project 15_SPI Slave Receiver_Polling Mode ****
+01:00:33 **** Build of configuration Debug for project 15_SPI Slave Receiver_Polling Mode ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G031xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "15_SPI Slave Receiver_Polling Mode.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\15_SPI Slave Receiver_Polling Mode\STM32G031J6MX_FLASH.ld" --specs=nosys.specs -Wl,-Map="15_SPI Slave Receiver_Polling Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 15_SPI Slave Receiver_Polling Mode.elf
- 
 arm-none-eabi-size   15_SPI\ Slave\ Receiver_Polling\ Mode.elf 
-arm-none-eabi-objdump -h -S  15_SPI\ Slave\ Receiver_Polling\ Mode.elf  > "15_SPI Slave Receiver_Polling Mode.list"
    text	   data	    bss	    dec	    hex	filename
    8316	     20	   1684	  10020	   2724	15_SPI Slave Receiver_Polling Mode.elf
 Finished building: default.size.stdout
  
-Finished building: 15_SPI Slave Receiver_Polling Mode.list
- 
 
-22:06:15 Build Finished. 0 errors, 0 warnings. (took 1s.94ms)
+01:00:33 Build Finished. 0 errors, 0 warnings. (took 480ms)
 

@@ -1,4 +1,4 @@
-05:05:13 **** Incremental Build of configuration Debug for project 17_DAC single mode_Sine wave generation ****
+01:00:37 **** Build of configuration Debug for project 17_DAC single mode_Sine wave generation ****
 make -j4 all 
 arm-none-eabi-size   17_DAC\ single\ mode_Sine\ wave\ generation.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   17_DAC\ single\ mode_Sine\ wave\ generation.elf
 Finished building: default.size.stdout
  
 
-05:05:14 Build Finished. 0 errors, 0 warnings. (took 530ms)
+01:00:37 Build Finished. 0 errors, 0 warnings. (took 396ms)
 
