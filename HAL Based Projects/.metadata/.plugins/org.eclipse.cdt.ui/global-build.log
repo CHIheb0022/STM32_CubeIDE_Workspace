@@ -1,37 +1,67 @@
-23:53:21 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+05:42:18 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32l4xx_hal_msp.d" -MT"Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32l4xx_hal_msp.o"
-arm-none-eabi-gcc "../Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32l4xx_it.d" -MT"Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32l4xx_it.o"
-arm-none-eabi-gcc -o "MiniProject _ UART data stream reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data stream reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data stream reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MiniProject _ UART data stream reading.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Real_Time_Plotting.elf
  
-arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
-arm-none-eabi-objdump -h -S  MiniProject\ _\ UART\ data\ stream\ reading.elf  > "MiniProject _ UART data stream reading.list"
+arm-none-eabi-size   Real_Time_Plotting.elf 
+arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
    text	   data	    bss	    dec	    hex	filename
-  24132	     20	   1908	  26060	   65cc	MiniProject _ UART data stream reading.elf
+  21116	    112	   2096	  23324	   5b1c	Real_Time_Plotting.elf
 Finished building: default.size.stdout
  
-Finished building: MiniProject _ UART data stream reading.list
+Finished building: Real_Time_Plotting.list
  
-23:53:29 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+05:42:25 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
 make -j4 all 
-arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
+arm-none-eabi-size   Real_Time_Plotting.elf 
    text	   data	    bss	    dec	    hex	filename
-  24132	     20	   1908	  26060	   65cc	MiniProject _ UART data stream reading.elf
+  21116	    112	   2096	  23324	   5b1c	Real_Time_Plotting.elf
 Finished building: default.size.stdout
  
-00:00:26 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+06:25:23 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
 make -j4 all 
-arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Real_Time_Plotting.elf
+ 
+arm-none-eabi-size   Real_Time_Plotting.elf 
+arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
    text	   data	    bss	    dec	    hex	filename
-  24132	     20	   1908	  26060	   65cc	MiniProject _ UART data stream reading.elf
+  21120	    112	   2096	  23328	   5b20	Real_Time_Plotting.elf
 Finished building: default.size.stdout
  
-00:01:55 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+Finished building: Real_Time_Plotting.list
+ 
+06:27:59 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
 make -j4 all 
-arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:15: warning: unused variable 'y' [-Wunused-variable]
+  136 |           int y = rand() % 1000; // Generate a random value between 0 and 999 for y
+      |               ^
+arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Real_Time_Plotting.elf
+ 
+arm-none-eabi-size   Real_Time_Plotting.elf 
+arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
    text	   data	    bss	    dec	    hex	filename
-  24132	     20	   1908	  26060	   65cc	MiniProject _ UART data stream reading.elf
+  21112	    112	   2096	  23320	   5b18	Real_Time_Plotting.elf
+Finished building: default.size.stdout
+ 
+Finished building: Real_Time_Plotting.list
+ 
+06:28:06 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
+make -j4 all 
+arm-none-eabi-size   Real_Time_Plotting.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21112	    112	   2096	  23320	   5b18	Real_Time_Plotting.elf
+Finished building: default.size.stdout
+ 
+06:48:48 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
+make -j4 all 
+arm-none-eabi-size   Real_Time_Plotting.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21112	    112	   2096	  23320	   5b18	Real_Time_Plotting.elf
 Finished building: default.size.stdout
  

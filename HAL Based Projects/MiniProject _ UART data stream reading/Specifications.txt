@@ -1,0 +1,173 @@
+/* 
+-This Application is a Blutooth based-Project: a Remote controlled robot using an STM32L476RG connected via a HC05 BLE module 
+to a Smartphone (Sending data in a serial console) to the STM32 
+-The Interface between the HC05 and the STM32 board is established using UART communication.
+-The robot is a model of a real car consists of two leds (a front/back light), two servo motors A and B, and a distance 
+sensor HC-SR04 ensuring the detection of an obstical.
+-Wiring is described as follows:
+	
+	PA5-->Front light LED
+	PA6-->Back Light LED
+	PB1-->Servo motor A
+	PB2-->Servo moto B
+	PB12-->HC-SR04 TRIG pin
+	PB13-->HC-SR04 ECHO pin
+
+-Principle: am receiving raw data as UART commands, storing them on a Buffer (RX_Buffer of 1 signle uint_8t) where the behaivour of the 
+robot respond to the giving UART messages straeamed from the Smartphone.
+User can perform the following actions using his smartphone:
+ 	
+	Press buttons to assign orders:(Interpreted as 'B','C','D','E','F' to assign respectively a Front_Light_Toggle, Back_Light_Toggle,
+	Turn_left, Turn_Right).
+	Adjust servos Speed using Two sliding bares ('JXX':ServoA speed, 'KXX':ServoB speed) where XX is the ASCI representation for a range of values from 0 to 180.  
+
+-To give u insignts on the received commands: Here is are examples of the data frames captured from the smartphone (for each action performed by the user) using RealTerm displayed 
+using the int8 foramt:
+	75 49 56 48 : K180
+	74 49 52 49 : J141
+	65          : A
+	66	    : B
+
+*/   
+
+
+#include "main.h"
+#include "string.h" //
+
+//Receiving Buffer len
+#define Buffer_len 3
+#define LED_Number 2
+
+//UART handler 
+UART_HandleTypeDef huart1;
+
+//RX_Buffer declaration
+uint8_t RX_BUFFER[Buffer_len];
+
+[...]
+//system_int function declaration
+//Peripheral Init function declaration
+[...]
+
+//Callback function .. because we are reading blutooth data trought UART in inturrupt mode.
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *);
+
+//The functions declaration ensuring the controll of the robot 
+
+void Front_Light_Toggle();
+void Back_Light_Toggle();
+void Turn_Left();
+void Turn_Right();
+void Stop();
+uint16t Range_to_obstacle();
+void ServoA_Speed_Calibration(speed);
+void ServoB_Speed_Calibration(speed);
+
+int main(){
+
+  HAL_Init();
+  SystemClock_Config();
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_USART1_UART_Init();
+  MX_USART2_UART_Init();
+
+  /* USER CODE BEGIN 2 */
+  HAL_UART_Receive_IT(&huart2, RX_BUFFER, Buffer_len);
+
+  while (1)
+  {
+
+  }
+
+}
+
+
+//UART configuration function definition
+//RCC  configuration function definition
+
+/* USER code begin 4 */
+
+//Callback function definition  
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+uint_16t Speed;
+
+//Check the Cplt callback function call belongs to the UART1 instance.
+    if (huart == &huart2) {
+    // Commande reçue, effectuez des actions en fonction de RX_BUFFER[0]
+
+    switch (RX_BUFFER[0]){
+
+      case 'B':
+	  // Turn on LED PA5 Front light toggle
+    	  Front_Light_Toggle();
+		  break;
+
+      case 'C':
+	  // Turn on LED PA6 Back light toggle
+    	  //Back_Light_Toggle();
+    	  break;
+
+      case 'D':
+    	  //Turn_Left();
+    	  break;
+
+      case 'E':
+    	  //Turn_Right();
+    	  break;
+
+      case 'F':
+    	  //Stop();
+    	  break;
+      
+      case 'J': //meaning next ascis will represent the speed of the Servo A.
+	Speed = (uint16_t) (RX_BUFFER[1]<<8 | RX_BUFFER[2]);
+	ServoA_Speed_Calibration(Speed);
+	break;
+      
+      case 'K': //meaning next ascis will represent the speed of the Servo B.
+	Speed = (uint16_t) (RX_BUFFER[1]<<8 | RX_BUFFER[2]);
+	ServoB_Speed_Calibration(Speed); 
+	break;
+    }
+
+    // Réactivez la réception UART pour la prochaine commande
+    HAL_UART_Receive_IT(&huart2, RX_BUFFER, Buffer_len);
+  }
+
+}
+
+/*Function Definition: controlling the Robot 
+
+void Front_Light_Toggle(){
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+}
+
+void Back_Light_Toggle(){
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
+}
+
+
+//void ServoB_Speed_Calibration(speed){  
+.....
+}
+//void ServoA_Speed_Calibration(speed){
+.....
+}
+//uint_16t Range_to_obstacle(){
+....
+}
+
+//void Turn_Left(){
+......
+}
+//void Turn_Right(){
+......
+}
+//void Stop(){
+.......
+}
+
+
+
