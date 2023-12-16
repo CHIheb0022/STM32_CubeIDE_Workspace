@@ -1,0 +1,2 @@
+../Core/Src/stm32_mpu9250_clk.c:3:5:stm32_get_clock_ms	16	static
+../Core/Src/stm32_mpu9250_clk.c:9:5:stm32_delay_ms	16	static

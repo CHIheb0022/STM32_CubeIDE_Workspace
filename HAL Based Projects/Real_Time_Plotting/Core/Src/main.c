@@ -107,16 +107,16 @@ int main(void)
       // Check the request
       if (Rx_Buffer[0] == 103) { // if the user enters the 'g' character
           if (!data_stream_active) {
-              sprintf(Tx_Buffer, "Data stream initiated\n");
+              //sprintf(Tx_Buffer, "Data stream initiated\n"); python script will handle logging infos to the user.
               HAL_UART_Transmit(&huart2, (uint8_t *)Tx_Buffer, strlen(Tx_Buffer), 100);
               data_stream_active = true;
           } else {
-              sprintf(Tx_Buffer, "Data stream already active\n");
+              //sprintf(Tx_Buffer, "Data stream already active\n");
               HAL_UART_Transmit(&huart2, (uint8_t *)Tx_Buffer, strlen(Tx_Buffer), 100);
           }
       } else if (Rx_Buffer[0] == 115) { // if the user enters the 's' character
           if (data_stream_active) {
-              sprintf(Tx_Buffer, "Data stream stopped\n");
+              //sprintf(Tx_Buffer, "Data stream stopped\n");
               HAL_UART_Transmit(&huart2, (uint8_t *)Tx_Buffer, strlen(Tx_Buffer), 100);
               data_stream_active = false;
           } else {
@@ -134,15 +134,16 @@ int main(void)
           // Generate random values for x and y
           int x = rand() % 1000; // Generate a random value between 0 and 999 for x
           int y = rand() % 1000; // Generate a random value between 0 and 999 for y
+          int z = rand() % 1000; // Generate a random value between 0 and 999 for y
 
-          // Create a string with the format "x,y\n"
-          sprintf(Tx_Buffer, "%d,%d\n", x, y);
+          // Create a string with the format "x,y,z\n"
+          sprintf(Tx_Buffer, "%d,%d,%d\n", x, y,z);
 
           // Transmit the string over UART
           HAL_UART_Transmit(&huart2, (uint8_t *)Tx_Buffer, strlen(Tx_Buffer), 100);
 
           // Introduce some delay before the next transmission (adjust the value based on your requirements)
-          HAL_Delay(500);
+          HAL_Delay(100);
       }
   }
 }

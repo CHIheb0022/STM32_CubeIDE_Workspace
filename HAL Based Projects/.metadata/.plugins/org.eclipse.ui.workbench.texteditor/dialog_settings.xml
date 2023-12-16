@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Front_Light_Toggle"/>
+		<item key="selection" value="hi2c1"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="hi2c2"/>
+			<item value="WHO_"/>
+			<item value="WHO"/>
+			<item value="0x68"/>
+			<item value="104"/>
+			<item value="i2c"/>
+			<item value="float32_t"/>
+			<item value="float"/>
+			<item value="SPI_CS"/>
+			<item value="Data stream initiated"/>
 			<item value="Front_Light_Toggle"/>
 			<item value="HAL_UART_TxCpltCallback"/>
 			<item value="I2C_FIRST_AND_LAST_FRAME"/>
 			<item value="HAL_I2C_Slave_R"/>
 			<item value="HAL_I2C_Master_Transmit"/>
-			<item value="HAL_UART_RxCpltCallback"/>
-			<item value="void hal"/>
-			<item value="callback"/>
-			<item value="HAL_TIM_IC_CaptureCallback"/>
 		</list>
 		<list key="replacehistory">
+			<item value="hi2c1"/>
+			<item value="float"/>
 			<item value=""/>
 		</list>
 	</section>

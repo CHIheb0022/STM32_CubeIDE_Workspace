@@ -1,0 +1,10 @@
+11:22:25 **** Incremental Build of configuration Debug for project MPU 9250 - Based Project ****
+make -j4 all 
+arm-none-eabi-size   MPU\ 9250\ -\ Based\ Project.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11296	     20	   1724	  13040	   32f0	MPU 9250 - Based Project.elf
+Finished building: default.size.stdout
+ 
+
+11:22:25 Build Finished. 0 errors, 0 warnings. (took 503ms)
+

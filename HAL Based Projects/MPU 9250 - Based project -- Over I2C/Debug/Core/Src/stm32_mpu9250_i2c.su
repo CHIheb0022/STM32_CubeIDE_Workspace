@@ -1,0 +1,4 @@
+../Core/Src/stm32_mpu9250_i2c.c:10:16:wait_for_gpio_state_timeout	32	static,ignoring_inline_asm
+../Core/Src/stm32_mpu9250_i2c.c:33:13:I2C_ClearBusyFlagErratum	40	static,ignoring_inline_asm
+../Core/Src/stm32_mpu9250_i2c.c:109:5:stm32_i2c_write	64	dynamic
+../Core/Src/stm32_mpu9250_i2c.c:131:5:stm32_i2c_read	32	static

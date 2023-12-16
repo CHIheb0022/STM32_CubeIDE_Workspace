@@ -1,0 +1,13 @@
+11:54:37 **** Incremental Build of configuration Debug for project MPU 9250 - Based project (Over I2C) ****
+make -j4 all 
+arm-none-eabi-size   MPU\ 9250\ -\ Based\ project\ (Over\ I2C).elf 
+arm-none-eabi-objdump -h -S  MPU\ 9250\ -\ Based\ project\ (Over\ I2C).elf  > "MPU 9250 - Based project (Over I2C).list"
+c:/st/stm32cubeide_1.13.2/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.make.win32_2.1.0.202305091550/tools/bin/sh: syntax error: unexpected "("
+make: *** [makefile:70: default.size.stdout] Error 2
+make: *** Waiting for unfinished jobs....
+c:/st/stm32cubeide_1.13.2/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.make.win32_2.1.0.202305091550/tools/bin/sh: syntax error: unexpected "("
+make: *** [makefile:75: MPU 9250 - Based project (Over I2C).list] Error 2
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+11:54:37 Build Failed. 3 errors, 0 warnings. (took 432ms)
+

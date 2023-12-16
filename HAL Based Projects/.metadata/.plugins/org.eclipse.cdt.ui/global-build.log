@@ -1,67 +1,21 @@
-05:42:18 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
+16:57:50 **** Incremental Build of configuration Debug for project MPU 9250 - Based project -- Over I2C ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Real_Time_Plotting.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/STM32L4xx_HAL_Driver/Inc -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/CMSIS/Device/ST/STM32L4xx/Include -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MPU 9250 - Based project -- Over I2C.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MPU 9250 - Based project -- Over I2C\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU 9250 - Based project -- Over I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU 9250 - Based project -- Over I2C.elf
  
-arm-none-eabi-size   Real_Time_Plotting.elf 
-arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
+arm-none-eabi-size   MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf 
+arm-none-eabi-objdump -h -S  MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf  > "MPU 9250 - Based project -- Over I2C.list"
    text	   data	    bss	    dec	    hex	filename
-  21116	    112	   2096	  23324	   5b1c	Real_Time_Plotting.elf
+  10032	     24	   1712	  11768	   2df8	MPU 9250 - Based project -- Over I2C.elf
 Finished building: default.size.stdout
  
-Finished building: Real_Time_Plotting.list
+Finished building: MPU 9250 - Based project -- Over I2C.list
  
-05:42:25 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
+16:58:12 **** Incremental Build of configuration Debug for project MPU 9250 - Based project -- Over I2C ****
 make -j4 all 
-arm-none-eabi-size   Real_Time_Plotting.elf 
+arm-none-eabi-size   MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf 
    text	   data	    bss	    dec	    hex	filename
-  21116	    112	   2096	  23324	   5b1c	Real_Time_Plotting.elf
-Finished building: default.size.stdout
- 
-06:25:23 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Real_Time_Plotting.elf
- 
-arm-none-eabi-size   Real_Time_Plotting.elf 
-arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
-   text	   data	    bss	    dec	    hex	filename
-  21120	    112	   2096	  23328	   5b20	Real_Time_Plotting.elf
-Finished building: default.size.stdout
- 
-Finished building: Real_Time_Plotting.list
- 
-06:27:59 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:136:15: warning: unused variable 'y' [-Wunused-variable]
-  136 |           int y = rand() % 1000; // Generate a random value between 0 and 999 for y
-      |               ^
-arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Real_Time_Plotting.elf
- 
-arm-none-eabi-size   Real_Time_Plotting.elf 
-arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
-   text	   data	    bss	    dec	    hex	filename
-  21112	    112	   2096	  23320	   5b18	Real_Time_Plotting.elf
-Finished building: default.size.stdout
- 
-Finished building: Real_Time_Plotting.list
- 
-06:28:06 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
-make -j4 all 
-arm-none-eabi-size   Real_Time_Plotting.elf 
-   text	   data	    bss	    dec	    hex	filename
-  21112	    112	   2096	  23320	   5b18	Real_Time_Plotting.elf
-Finished building: default.size.stdout
- 
-06:48:48 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
-make -j4 all 
-arm-none-eabi-size   Real_Time_Plotting.elf 
-   text	   data	    bss	    dec	    hex	filename
-  21112	    112	   2096	  23320	   5b18	Real_Time_Plotting.elf
+  10032	     24	   1712	  11768	   2df8	MPU 9250 - Based project -- Over I2C.elf
 Finished building: default.size.stdout
  

@@ -1,0 +1,10 @@
+16:58:12 **** Incremental Build of configuration Debug for project MPU 9250 - Based project -- Over I2C ****
+make -j4 all 
+arm-none-eabi-size   MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10032	     24	   1712	  11768	   2df8	MPU 9250 - Based project -- Over I2C.elf
+Finished building: default.size.stdout
+ 
+
+16:58:12 Build Finished. 0 errors, 0 warnings. (took 384ms)
+
