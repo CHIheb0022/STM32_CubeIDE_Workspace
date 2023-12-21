@@ -63,12 +63,6 @@ static void MX_TIM2_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
-
- // Duty cycle variable
-
-uint32_t CC_value = 0;
-float dutycycle;
-
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -108,14 +102,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	// Adjust the capture pulse every 0.1s. once it attend the maximum (timer period) reset to 100 (alpha = 0.1);
-	CC_value += 10;
-	dutycycle = CC_value * 100 / 1000;  // This variable is set to monitor duty cycle (in %) during debug session.
-	if (CC_value==1000){
-		CC_value = 10;
-	}
-	TIM2->CCR1 = CC_value; // adjust the capture compare register (to change the duty cycle)
-	HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
