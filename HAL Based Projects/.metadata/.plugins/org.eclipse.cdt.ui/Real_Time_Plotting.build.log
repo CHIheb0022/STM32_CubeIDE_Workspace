@@ -1,10 +1,10 @@
-00:49:04 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
+19:55:49 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
 make -j4 all 
 arm-none-eabi-size   Real_Time_Plotting.elf 
    text	   data	    bss	    dec	    hex	filename
-  21156	    112	   2096	  23364	   5b44	Real_Time_Plotting.elf
+  21044	    112	   2096	  23252	   5ad4	Real_Time_Plotting.elf
 Finished building: default.size.stdout
  
 
-00:49:05 Build Finished. 0 errors, 0 warnings. (took 466ms)
+19:55:50 Build Finished. 0 errors, 0 warnings. (took 539ms)
 
