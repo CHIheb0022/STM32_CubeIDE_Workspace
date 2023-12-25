@@ -32,10 +32,12 @@ The Hardware Abstraction Layer (HAL) is a high-level library provided by STMicro
    - Use `printf` for console debugging.
    - Live expression view to monitor data.
    - How to use SWV: ITM data console trace window & data trace timeline Graph window.
-* **UART Communication:** PC/STM32 <--> STM32 greeting: "Hello world" [No. 5].
+* **UART Communication:** PC/STM32 <--> STM32 greeting: "Hello world" [No. 10 --> N° 12].
    - Configure UART1 to establish Board to board communication.
    - Use UART2 bridging STM32 with your PC through ST_link debugger.
    - Monitor exchanged messages using 3 different tools (SWD & printf, Real term, Pyserial library).
+   - Polling, Interrupt and DMA mode.
+   - Sprintf() function. 
    ...
 
 These projects draw inspiration from the [DeepBlue course](https://deepbluembedded.com/stm32-arm-programming-tutorials/) on STM32 boards.
