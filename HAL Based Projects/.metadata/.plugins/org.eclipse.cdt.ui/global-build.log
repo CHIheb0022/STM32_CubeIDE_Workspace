@@ -1,196 +1,54 @@
-16:57:50 **** Incremental Build of configuration Debug for project MPU 9250 - Based project -- Over I2C ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/STM32L4xx_HAL_Driver/Inc -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/CMSIS/Device/ST/STM32L4xx/Include -IC:/Users/User/STM32Cube/Repository/STM32Cube_FW_L4_V1.17.2/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MPU 9250 - Based project -- Over I2C.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MPU 9250 - Based project -- Over I2C\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU 9250 - Based project -- Over I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MPU 9250 - Based project -- Over I2C.elf
- 
-arm-none-eabi-size   MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf 
-arm-none-eabi-objdump -h -S  MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf  > "MPU 9250 - Based project -- Over I2C.list"
-   text	   data	    bss	    dec	    hex	filename
-  10032	     24	   1712	  11768	   2df8	MPU 9250 - Based project -- Over I2C.elf
-Finished building: default.size.stdout
- 
-Finished building: MPU 9250 - Based project -- Over I2C.list
- 
-16:58:12 **** Incremental Build of configuration Debug for project MPU 9250 - Based project -- Over I2C ****
-make -j4 all 
-arm-none-eabi-size   MPU\ 9250\ -\ Based\ project\ --\ Over\ I2C.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10032	     24	   1712	  11768	   2df8	MPU 9250 - Based project -- Over I2C.elf
-Finished building: default.size.stdout
- 
-16:37:57 **** Build of configuration Debug for project 7_Timer PWM Mode ****
-make -j4 all 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11528	     20	   1652	  13200	   3390	7_Timer PWM Mode.elf
-Finished building: default.size.stdout
- 
-16:39:48 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
+03:01:41 **** Incremental Build of configuration Debug for project Testing_BLE ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "7_Timer PWM Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\7_Timer PWM Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_Timer PWM Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 7_Timer PWM Mode.elf
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:248:17: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  248 |                 sprintf(TX_BUFFER,"Received data: %d \r\n", &RX_BUFFER[0]);
+      |                 ^~~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:248:17: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  248 |                 sprintf(TX_BUFFER,"Received data: %d \r\n", &RX_BUFFER[0]);
+      |                 ^~~~~~~
+../Core/Src/main.c:248:17: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:248:25: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  248 |                 sprintf(TX_BUFFER,"Received data: %d \r\n", &RX_BUFFER[0]);
+      |                         ^~~~~~~~~
+      |                         |
+      |                         uint8_t * {aka unsigned char *}
+../Core/Src/main.c:248:25: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:248:52: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  248 |                 sprintf(TX_BUFFER,"Received data: %d \r\n", &RX_BUFFER[0]);
+      |                                                   ~^        ~~~~~~~~~~~~~
+      |                                                    |        |
+      |                                                    int      uint8_t * {aka unsigned char *}
+      |                                                   %hhn
+arm-none-eabi-gcc -o "Testing_BLE.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Testing_BLE\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Testing_BLE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Testing_BLE.elf
  
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-arm-none-eabi-objdump -h -S  7_Timer\ PWM\ Mode.elf  > "7_Timer PWM Mode.list"
+arm-none-eabi-size  Testing_BLE.elf 
+arm-none-eabi-objdump -h -S Testing_BLE.elf  > "Testing_BLE.list"
    text	   data	    bss	    dec	    hex	filename
-  11528	     20	   1652	  13200	   3390	7_Timer PWM Mode.elf
+  18604	    100	   2060	  20764	   511c	Testing_BLE.elf
 Finished building: default.size.stdout
  
-Finished building: 7_Timer PWM Mode.list
+Finished building: Testing_BLE.list
  
-17:24:12 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
+03:01:45 **** Incremental Build of configuration Debug for project Testing_BLE ****
 make -j4 all 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
+arm-none-eabi-size  Testing_BLE.elf 
    text	   data	    bss	    dec	    hex	filename
-  11528	     20	   1652	  13200	   3390	7_Timer PWM Mode.elf
+  18604	    100	   2060	  20764	   511c	Testing_BLE.elf
 Finished building: default.size.stdout
  
-17:29:26 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
+03:12:13 **** Incremental Build of configuration Debug for project Testing_BLE ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "7_Timer PWM Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\7_Timer PWM Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_Timer PWM Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 7_Timer PWM Mode.elf
- 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-arm-none-eabi-objdump -h -S  7_Timer\ PWM\ Mode.elf  > "7_Timer PWM Mode.list"
+arm-none-eabi-size  Testing_BLE.elf 
    text	   data	    bss	    dec	    hex	filename
-  11396	     20	   1644	  13060	   3304	7_Timer PWM Mode.elf
-Finished building: default.size.stdout
- 
-Finished building: 7_Timer PWM Mode.list
- 
-17:48:48 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "7_Timer PWM Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\7_Timer PWM Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_Timer PWM Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 7_Timer PWM Mode.elf
- 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-arm-none-eabi-objdump -h -S  7_Timer\ PWM\ Mode.elf  > "7_Timer PWM Mode.list"
-   text	   data	    bss	    dec	    hex	filename
-  11372	     20	   1644	  13036	   32ec	7_Timer PWM Mode.elf
-Finished building: default.size.stdout
- 
-Finished building: 7_Timer PWM Mode.list
- 
-17:56:11 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
-make -j4 all 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11372	     20	   1644	  13036	   32ec	7_Timer PWM Mode.elf
-Finished building: default.size.stdout
- 
-18:08:46 **** Incremental Build of configuration Debug for project 7_Timer PWM Mode ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "7_Timer PWM Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\7_Timer PWM Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_Timer PWM Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 7_Timer PWM Mode.elf
- 
-arm-none-eabi-size   7_Timer\ PWM\ Mode.elf 
-arm-none-eabi-objdump -h -S  7_Timer\ PWM\ Mode.elf  > "7_Timer PWM Mode.list"
-   text	   data	    bss	    dec	    hex	filename
-  11372	     20	   1644	  13036	   32ec	7_Timer PWM Mode.elf
-Finished building: default.size.stdout
- 
-Finished building: 7_Timer PWM Mode.list
- 
-18:10:51 **** Build of configuration Debug for project 14_ADC polling Mode _ LED Dimmer ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "14_ADC polling Mode _ LED Dimmer.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\14_ADC polling Mode _ LED Dimmer\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="14_ADC polling Mode _ LED Dimmer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 14_ADC polling Mode _ LED Dimmer.elf
- 
-arm-none-eabi-size   14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf 
-arm-none-eabi-objdump -h -S  14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf  > "14_ADC polling Mode _ LED Dimmer.list"
-   text	   data	    bss	    dec	    hex	filename
-  19332	     20	   1756	  21108	   5274	14_ADC polling Mode _ LED Dimmer.elf
-Finished building: default.size.stdout
- 
-Finished building: 14_ADC polling Mode _ LED Dimmer.list
- 
-18:12:14 **** Incremental Build of configuration Debug for project 14_ADC polling Mode _ LED Dimmer ****
-make -j4 all 
-arm-none-eabi-size   14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf 
-   text	   data	    bss	    dec	    hex	filename
-  19332	     20	   1756	  21108	   5274	14_ADC polling Mode _ LED Dimmer.elf
-Finished building: default.size.stdout
- 
-18:22:45 **** Build of configuration Debug for project 17_DAC single mode ****
-make -j4 all 
-arm-none-eabi-size   17_DAC\ single\ mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7012	     20	   1596	   8628	   21b4	17_DAC single mode.elf
-Finished building: default.size.stdout
- 
-18:23:58 **** Incremental Build of configuration Debug for project 17_DAC single mode ****
-make -j4 all 
-arm-none-eabi-size   17_DAC\ single\ mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7012	     20	   1596	   8628	   21b4	17_DAC single mode.elf
-Finished building: default.size.stdout
- 
-18:27:35 **** Incremental Build of configuration Debug for project 17_DAC single mode ****
-make -j4 all 
-arm-none-eabi-size   17_DAC\ single\ mode.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7012	     20	   1596	   8628	   21b4	17_DAC single mode.elf
-Finished building: default.size.stdout
- 
-18:28:44 **** Build of configuration Debug for project 17_DAC single mode_Sine wave generation ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "17_DAC single mode_Sine wave generation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\17_DAC single mode_Sine wave generation\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_DAC single mode_Sine wave generation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 17_DAC single mode_Sine wave generation.elf
- 
-arm-none-eabi-size   17_DAC\ single\ mode_Sine\ wave\ generation.elf 
-arm-none-eabi-objdump -h -S  17_DAC\ single\ mode_Sine\ wave\ generation.elf  > "17_DAC single mode_Sine wave generation.list"
-   text	   data	    bss	    dec	    hex	filename
-  10780	    532	   1740	  13052	   32fc	17_DAC single mode_Sine wave generation.elf
-Finished building: default.size.stdout
- 
-Finished building: 17_DAC single mode_Sine wave generation.list
- 
-18:30:32 **** Incremental Build of configuration Debug for project 17_DAC single mode_Sine wave generation ****
-make -j4 all 
-arm-none-eabi-size   17_DAC\ single\ mode_Sine\ wave\ generation.elf 
-   text	   data	    bss	    dec	    hex	filename
-  10780	    532	   1740	  13052	   32fc	17_DAC single mode_Sine wave generation.elf
-Finished building: default.size.stdout
- 
-18:52:23 **** Incremental Build of configuration Debug for project 14_ADC polling Mode _ LED Dimmer ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "14_ADC polling Mode _ LED Dimmer.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\14_ADC polling Mode _ LED Dimmer\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="14_ADC polling Mode _ LED Dimmer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 14_ADC polling Mode _ LED Dimmer.elf
- 
-arm-none-eabi-size   14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf 
-arm-none-eabi-objdump -h -S  14_ADC\ polling\ Mode\ _\ LED\ Dimmer.elf  > "14_ADC polling Mode _ LED Dimmer.list"
-   text	   data	    bss	    dec	    hex	filename
-  19308	     20	   1756	  21084	   525c	14_ADC polling Mode _ LED Dimmer.elf
-Finished building: default.size.stdout
- 
-Finished building: 14_ADC polling Mode _ LED Dimmer.list
- 
-19:55:19 **** Build of configuration Debug for project Real_Time_Plotting ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Real_Time_Plotting.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\Real_Time_Plotting\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Real_Time_Plotting.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Real_Time_Plotting.elf
- 
-arm-none-eabi-size   Real_Time_Plotting.elf 
-arm-none-eabi-objdump -h -S  Real_Time_Plotting.elf  > "Real_Time_Plotting.list"
-   text	   data	    bss	    dec	    hex	filename
-  21044	    112	   2096	  23252	   5ad4	Real_Time_Plotting.elf
-Finished building: default.size.stdout
- 
-Finished building: Real_Time_Plotting.list
- 
-19:55:49 **** Incremental Build of configuration Debug for project Real_Time_Plotting ****
-make -j4 all 
-arm-none-eabi-size   Real_Time_Plotting.elf 
-   text	   data	    bss	    dec	    hex	filename
-  21044	    112	   2096	  23252	   5ad4	Real_Time_Plotting.elf
+  18604	    100	   2060	  20764	   511c	Testing_BLE.elf
 Finished building: default.size.stdout
  

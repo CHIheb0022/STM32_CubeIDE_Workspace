@@ -1,0 +1,10 @@
+21:08:27 **** Incremental Build of configuration Debug for project HC05_L289N_Interfacing ****
+make -j4 all 
+arm-none-eabi-size  HC05_L289N_Interfacing.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25896	     20	   1884	  27800	   6c98	HC05_L289N_Interfacing.elf
+Finished building: default.size.stdout
+ 
+
+21:08:27 Build Finished. 0 errors, 0 warnings. (took 380ms)
+

@@ -1,19 +1,17 @@
-01:00:50 **** Build of configuration Debug for project MiniProject _ Blutooth Module interfacing with UART ****
+20:34:16 **** Incremental Build of configuration Debug for project MiniProject _ Blutooth Module interfacing with UART ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
 arm-none-eabi-gcc -o "MiniProject _ Blutooth Module interfacing with UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ Blutooth Module interfacing with UART\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ Blutooth Module interfacing with UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: MiniProject _ Blutooth Module interfacing with UART.elf
  
-arm-none-eabi-size   MiniProject\ _\ Blutooth\ Module\ interfacing\ with\ UART.elf 
-arm-none-eabi-objdump -h -S  MiniProject\ _\ Blutooth\ Module\ interfacing\ with\ UART.elf  > "MiniProject _ Blutooth Module interfacing with UART.list"
+arm-none-eabi-size  MiniProject\ _\ Blutooth\ Module\ interfacing\ with\ UART.elf 
+arm-none-eabi-objdump -h -S MiniProject\ _\ Blutooth\ Module\ interfacing\ with\ UART.elf  > "MiniProject _ Blutooth Module interfacing with UART.list"
    text	   data	    bss	    dec	    hex	filename
-  26960	     20	   1900	  28880	   70d0	MiniProject _ Blutooth Module interfacing with UART.elf
+  24444	     20	   1900	  26364	   66fc	MiniProject _ Blutooth Module interfacing with UART.elf
 Finished building: default.size.stdout
  
 Finished building: MiniProject _ Blutooth Module interfacing with UART.list
  
 
-01:00:54 Build Finished. 0 errors, 0 warnings. (took 3s.406ms)
+20:34:18 Build Finished. 0 errors, 0 warnings. (took 1s.904ms)
 

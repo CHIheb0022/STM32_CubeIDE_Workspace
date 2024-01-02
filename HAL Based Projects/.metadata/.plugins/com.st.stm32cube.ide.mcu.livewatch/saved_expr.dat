@@ -1,5 +1,4 @@
-AccData
-GyroData
-MagData
-x
-n
+ADC_RES
+PWM_Value
+RX_index
+RX_BUFFER

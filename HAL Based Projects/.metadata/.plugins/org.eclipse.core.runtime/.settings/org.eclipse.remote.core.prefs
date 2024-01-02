@@ -1,0 +1,11 @@
+connections/org.eclipse.remote.serial.core.connectionType/STM32/serial.baudRate=6
+connections/org.eclipse.remote.serial.core.connectionType/STM32/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/STM32/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/STM32/serial.portName=COM6
+connections/org.eclipse.remote.serial.core.connectionType/STM32/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/STM32L476RG/serial.baudRate=6
+connections/org.eclipse.remote.serial.core.connectionType/STM32L476RG/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/STM32L476RG/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/STM32L476RG/serial.portName=COM7
+connections/org.eclipse.remote.serial.core.connectionType/STM32L476RG/serial.stopBits=0
+eclipse.preferences.version=1
