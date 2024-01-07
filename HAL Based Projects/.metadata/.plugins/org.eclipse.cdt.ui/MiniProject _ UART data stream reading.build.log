@@ -1,4 +1,4 @@
-01:39:48 **** Incremental Build of configuration Debug for project MiniProject _ UART data stream reading ****
+20:19:59 **** Build of configuration Debug for project MiniProject _ UART data stream reading ****
 make -j4 all 
 arm-none-eabi-gcc "../util/DWT_Delay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"util/DWT_Delay.d" -MT"util/DWT_Delay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "util/DWT_Delay.o"
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32l476rgtx.d" -MT"Startup/startup_stm32l476rgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32l476rgtx.o" "../Startup/startup_stm32l476rgtx.s"
@@ -30,8 +30,8 @@ arm-none-eabi-gcc "../Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c" 
 arm-none-eabi-gcc -o "MiniProject _ UART data stream reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data stream reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data stream reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: MiniProject _ UART data stream reading.elf
  
-arm-none-eabi-size   MiniProject\ _\ UART\ data\ stream\ reading.elf 
-arm-none-eabi-objdump -h -S  MiniProject\ _\ UART\ data\ stream\ reading.elf  > "MiniProject _ UART data stream reading.list"
+arm-none-eabi-size  MiniProject\ _\ UART\ data\ stream\ reading.elf 
+arm-none-eabi-objdump -h -S MiniProject\ _\ UART\ data\ stream\ reading.elf  > "MiniProject _ UART data stream reading.list"
    text	   data	    bss	    dec	    hex	filename
   24132	     20	   1908	  26060	   65cc	MiniProject _ UART data stream reading.elf
 Finished building: default.size.stdout
@@ -39,5 +39,5 @@ Finished building: default.size.stdout
 Finished building: MiniProject _ UART data stream reading.list
  
 
-01:39:58 Build Finished. 0 errors, 0 warnings. (took 10s.98ms)
+20:20:08 Build Finished. 0 errors, 0 warnings. (took 8s.869ms)
 

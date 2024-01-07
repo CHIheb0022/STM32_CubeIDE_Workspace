@@ -1,4 +1,4 @@
-03:12:13 **** Incremental Build of configuration Debug for project Testing_BLE ****
+19:26:27 **** Incremental Build of configuration Debug for project Testing_BLE ****
 make -j4 all 
 arm-none-eabi-size  Testing_BLE.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  Testing_BLE.elf
 Finished building: default.size.stdout
  
 
-03:12:14 Build Finished. 0 errors, 0 warnings. (took 433ms)
+19:26:27 Build Finished. 0 errors, 0 warnings. (took 804ms)
 

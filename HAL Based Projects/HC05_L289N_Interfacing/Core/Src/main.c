@@ -36,8 +36,8 @@
 #define in4 GPIO_PIN_3
 
 #define enA TIM_CHANNEL_2 // Left motor
-//#define in3 GPIO_PIN_2
-//#define in4 GPIO_PIN_3
+#define in3 GPIO_PIN_4
+#define in4 GPIO_PIN_3
 
 
 
@@ -72,6 +72,11 @@ static void MX_TIM2_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
+void Switch_Direction_SrvoA(void);
+void Switch_Direction_SrvoB(void);
+void Front_light();
+void Back_light();
+void Alert();
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *);
 uint32_t MAP(uint32_t au32_IN, uint32_t au32_INmin, uint32_t au32_INmax, uint32_t au32_OUTmin, uint32_t au32_OUTmax);
 
@@ -135,6 +140,8 @@ int main(void)
   //Initialize Right motors direction to forward
   HAL_GPIO_WritePin(GPIOC, in3, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, in4, GPIO_PIN_RESET);
+
+
 
   /* USER CODE END 2 */
 
@@ -411,6 +418,28 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void Switch_Direction_SrvoA(void){
+	HAL_GPIO_TogglePin(GPIOC, in3 | in4);
+}
+
+void Switch_Direction_SrvoB(void){
+	HAL_GPIO_TogglePin(GPIOC, in1 | in2);
+}
+
+void Front_light(){
+	//
+}
+
+void Back_light(){
+	//
+}
+
+void Alert(){
+	//
+}
+
+
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
