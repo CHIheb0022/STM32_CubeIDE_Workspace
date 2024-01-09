@@ -14,13 +14,6 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-
-  - Timer 2 is Configured in output compare mode with a capture compare value set to 500 and using a toggle mode we should
-  get a signal on the Channel 1 toggling each 500ms. Since we are using a tick period = 1ms.(TIM_clk = 16Mhz,prescaler = 15999 , ARR=1000)
-  - Use live expression to visualize Timer counter value "Tim_counter".
-
-
-
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
@@ -207,7 +200,7 @@ static void MX_TIM2_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_TOGGLE;
-  sConfigOC.Pulse = 500;
+  sConfigOC.Pulse = 1000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_OC_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
