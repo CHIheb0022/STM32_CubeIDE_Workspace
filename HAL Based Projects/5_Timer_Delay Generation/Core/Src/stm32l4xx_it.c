@@ -205,6 +205,20 @@ void TIM6_DAC_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
   HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+  /*
+   * This ISR Will be triggered each time the Timer6 counter overflows. This event occurs each 1s
+   * Tick time period = TIM_CLK / (Pres + 1 )
+   * Since we are providing the timer with 16MHz frequency using 15999 pres value our tick period = 1ms
+   * To create a 1s Fix delay we must set the Auto Reload Register to 999. (counting from 0 to 999 overflows the timer creating the desired delay)
+
+   	 WE CAN EITHER WRITE INTO THE ISR DIRECTLY or IMPLEMENT THE CORRESPONDING CALLBACK FUNCTION IN THE main FILE:
+
+   	 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+   	 	 if (htim == htim6 ){
+   	 	 	 HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+   	 	 }
+  */
+
 
   /* USER CODE END TIM6_DAC_IRQn 0 */
   HAL_TIM_IRQHandler(&htim6);

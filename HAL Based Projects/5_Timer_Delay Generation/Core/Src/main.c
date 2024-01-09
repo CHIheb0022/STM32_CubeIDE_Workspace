@@ -14,7 +14,42 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  */
+  This project could be used to show case Timers capabilities on generating delays using two different techniques:
+
+  1_Using a non Blocking callbackperiodEllapsed function with a prefixed tick period as long as the ARR value which will define the delay length
+  for example in this setup we are using a basic timer with a tick period = 1ms and an ARR value of 999. So each 1000ms=1s we are firing
+  an interrupt that will be served by the NVIC using the Corresponding callback (callbackperiodEllapsed).
+
+  2_Using a polling approach in which we implement a delay function with a prefixed resolution equal to the timer tick period.
+  For the current CubeMX configuration the resolution is in ms since tick frequency is 1Khz.
+
+  Here the implementation of the delay function :
+  void delay_ms(uint16 delay){
+  	  __HAL_TIM_SET_COUNTR(&htim6,0); // or set the CNT directly : TIM6->CNT = 0;
+  	  while (__HAL_TIM_GET_COUNTR(&htim6) < delay); // or : while (TIM6->CNT < delay);
+  }
+
+  /* NOTE THAT WE CAN NOT CREATE DELAYS EXCEEDING THE ARR VALUE (The counter will overflow before reaching it).
+   * So for the current configuration: delay <= 1000.
+   * We can increase ARR to the MAX : 65536 to use this function in order to create longer delays.
+
+
+  3_ We can combine the two techniques mentioned above to create an ISR running independently from the CPU (non blocking mode)
+  triggered each 1ms assuming the current configuration: a tick period of 1ms (Just set the ARR to 0), and by incrementing a counter
+  each time we execute the ISR, we could benefit from this counter to implement a delay function with the same logic.
+
+   /*It's important to note that all interrupts have the ability to interrupt the normal flow of the program, regardless of
+    * their priority. And using this approach the context is frequently changed between the while(1) and the Periodellapsed ISR,
+    * every 1 millisecond. As a result, this frequent interruption could prevent the while(1) function from executing its
+    * instructions as intended.
+    *
+
+   /* PS: Consider implementing delay functions as Static Inline function for accurate timing.
+    * __STATIC_INLINE void DWT_Delay_ms(volatile uint32_t au32_milliseconds){ : example from the util library
+    	* ...........
+    	* }
+
+    *  */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -171,7 +206,7 @@ static void MX_TIM6_Init(void)
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 15999;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 1000;
+  htim6.Init.Period = 1000-1;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
