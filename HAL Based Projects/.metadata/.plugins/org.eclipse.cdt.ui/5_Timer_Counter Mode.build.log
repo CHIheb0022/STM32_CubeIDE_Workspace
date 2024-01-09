@@ -1,0 +1,35 @@
+18:19:28 **** Incremental Build of configuration Debug for project 5_Timer_Counter Mode ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  112 |     sprintf(message, "Tick Count = %d\n\r", tick_count);
+      |     ^~~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:112:5: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  112 |     sprintf(message, "Tick Count = %d\n\r", tick_count);
+      |     ^~~~~~~
+../Core/Src/main.c:112:5: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:112:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  112 |     sprintf(message, "Tick Count = %d\n\r", tick_count);
+      |             ^~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:112:13: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+arm-none-eabi-gcc -o "5_Timer_Counter Mode.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\5_Timer_Counter Mode\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_Timer_Counter Mode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_Timer_Counter Mode.elf
+ 
+arm-none-eabi-size  5_Timer_Counter\ Mode.elf 
+arm-none-eabi-objdump -h -S 5_Timer_Counter\ Mode.elf  > "5_Timer_Counter Mode.list"
+   text	   data	    bss	    dec	    hex	filename
+  17800	    140	   2108	  20048	   4e50	5_Timer_Counter Mode.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5_Timer_Counter Mode.list
+ 
+
+18:19:29 Build Finished. 0 errors, 3 warnings. (took 1s.550ms)
+

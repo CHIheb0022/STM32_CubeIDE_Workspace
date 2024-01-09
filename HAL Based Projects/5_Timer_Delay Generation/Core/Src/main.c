@@ -14,7 +14,7 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  This project could be used to show case Timers capabilities on generating delays using two different techniques:
+  This project is used to show case Timers capabilities on generating delays using tree different techniques:
 
   1_Using a non Blocking callbackperiodEllapsed function with a prefixed tick period as long as the ARR value which will define the delay length
   for example in this setup we are using a basic timer with a tick period = 1ms and an ARR value of 999. So each 1000ms=1s we are firing
