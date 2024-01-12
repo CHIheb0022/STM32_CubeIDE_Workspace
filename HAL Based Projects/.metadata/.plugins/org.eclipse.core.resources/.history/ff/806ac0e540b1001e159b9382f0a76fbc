@@ -14,10 +14,6 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  In this LAB we illustrate Timers utility on PWM mode generating a PWM signal controlling LED intensity
-  varying duty cycle each 1ms using a for loop.
-  The timer tick period is set to 1ms, PWM_Frequuency = TIM_CLK / (PSC+1)(ARR+1) = 15.23 Hz
-
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/

@@ -14,10 +14,6 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  In this LAB we illustrate Timers utility on PWM mode generating a PWM signal controlling LED intensity
-  varying duty cycle each 1ms using a for loop.
-  The timer tick period is set to 1ms, PWM_Frequuency = TIM_CLK / (PSC+1)(ARR+1) = 15.23 Hz
-
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
@@ -71,8 +67,6 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-  int32_t CH1_DC = 0;
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -109,22 +103,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-	// Varying Capture Compare register value to change ON time % OFF time : varying duty cycle
-
-	  while(CH1_DC < 65535)
-    {
-          TIM2->CCR1 = CH1_DC;
-          CH1_DC += 70;
-          HAL_Delay(1);
-    }
-
-    while(CH1_DC > 0)
-    {
-          TIM2->CCR1 = CH1_DC;
-          CH1_DC -= 70;
-          HAL_Delay(1);
-     }
   }
   /* USER CODE END 3 */
 }
@@ -193,9 +171,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 16-1;
+  htim2.Init.Prescaler = 15;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 65536-1;
+  htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
