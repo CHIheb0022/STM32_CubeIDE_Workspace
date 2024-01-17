@@ -29,9 +29,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  00020204  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00010fe1  00000000  00000000  00020247  2**0
+ 13 .debug_info   00010fe6  00000000  00000000  00020247  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 0000247b  00000000  00000000  00031228  2**0
+ 14 .debug_abbrev 0000247a  00000000  00000000  0003122d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_aranges 00000f70  00000000  00000000  000336a8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -13859,8 +13859,8 @@ void HCSR04_Trigger(uint8_t au8_HCSR04_Instance)
  80057d0:	2201      	movs	r2, #1
  80057d2:	4619      	mov	r1, r3
  80057d4:	f7fc fa3e 	bl	8001c54 <HAL_GPIO_WritePin>
-	DWT_Delay_us(2);
- 80057d8:	2002      	movs	r0, #2
+	DWT_Delay_us(10);
+ 80057d8:	200a      	movs	r0, #10
  80057da:	f7ff fb3b 	bl	8004e54 <DWT_Delay_us>
 	HAL_GPIO_WritePin(HCSR04_CfgParam[au8_HCSR04_Instance].TRIG_GPIO, HCSR04_CfgParam[au8_HCSR04_Instance].TRIG_PIN, 0);
  80057de:	79fa      	ldrb	r2, [r7, #7]

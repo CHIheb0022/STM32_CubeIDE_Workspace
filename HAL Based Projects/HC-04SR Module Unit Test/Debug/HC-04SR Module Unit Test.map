@@ -4563,7 +4563,7 @@ LOAD C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .comment       0x0000000000000043       0x44 ./ECUAL/HCSR04/HCSR04_cfg.o
  .comment       0x0000000000000043       0x44 ./util/DWT_Delay.o
 
-.debug_info     0x0000000000000000    0x10fe1
+.debug_info     0x0000000000000000    0x10fe6
  .debug_info    0x0000000000000000     0x11f7 ./Core/Src/main.o
  .debug_info    0x00000000000011f7     0x138d ./Core/Src/stm32l4xx_hal_msp.o
  .debug_info    0x0000000000002584      0x731 ./Core/Src/stm32l4xx_it.o
@@ -4581,10 +4581,10 @@ LOAD C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x000000000000a85c     0x169e ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o
  .debug_info    0x000000000000befa     0x3ad5 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
  .debug_info    0x000000000000f9cf     0x10c6 ./ECUAL/HCSR04/HCSR04.o
- .debug_info    0x0000000000010a95      0x320 ./ECUAL/HCSR04/HCSR04_cfg.o
- .debug_info    0x0000000000010db5      0x22c ./util/DWT_Delay.o
+ .debug_info    0x0000000000010a95      0x325 ./ECUAL/HCSR04/HCSR04_cfg.o
+ .debug_info    0x0000000000010dba      0x22c ./util/DWT_Delay.o
 
-.debug_abbrev   0x0000000000000000     0x247b
+.debug_abbrev   0x0000000000000000     0x247a
  .debug_abbrev  0x0000000000000000      0x2cc ./Core/Src/main.o
  .debug_abbrev  0x00000000000002cc      0x1ee ./Core/Src/stm32l4xx_hal_msp.o
  .debug_abbrev  0x00000000000004ba      0x1d9 ./Core/Src/stm32l4xx_it.o
@@ -4602,8 +4602,8 @@ LOAD C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_abbrev  0x0000000000001b47      0x283 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o
  .debug_abbrev  0x0000000000001dca      0x2d0 ./Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
  .debug_abbrev  0x000000000000209a      0x258 ./ECUAL/HCSR04/HCSR04.o
- .debug_abbrev  0x00000000000022f2       0xde ./ECUAL/HCSR04/HCSR04_cfg.o
- .debug_abbrev  0x00000000000023d0       0xab ./util/DWT_Delay.o
+ .debug_abbrev  0x00000000000022f2       0xdd ./ECUAL/HCSR04/HCSR04_cfg.o
+ .debug_abbrev  0x00000000000023cf       0xab ./util/DWT_Delay.o
 
 .debug_aranges  0x0000000000000000      0xf70
  .debug_aranges

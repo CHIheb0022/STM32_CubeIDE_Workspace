@@ -180,6 +180,6 @@ float HCSR04_Read(uint8_t au8_HCSR04_Instance)
 void HCSR04_Trigger(uint8_t au8_HCSR04_Instance)
 {
 	HAL_GPIO_WritePin(HCSR04_CfgParam[au8_HCSR04_Instance].TRIG_GPIO, HCSR04_CfgParam[au8_HCSR04_Instance].TRIG_PIN, 1);
-	DWT_Delay_us(2);
+	DWT_Delay_us(10);
 	HAL_GPIO_WritePin(HCSR04_CfgParam[au8_HCSR04_Instance].TRIG_GPIO, HCSR04_CfgParam[au8_HCSR04_Instance].TRIG_PIN, 0);
 }
