@@ -9,10 +9,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include util/subdir.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
--include ECUAL/HCSR04/subdir.mk
 -include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
 -include objects.mk
 
@@ -63,7 +61,7 @@ main-build: MiniProject\ _\ UART\ data\ stream\ reading.elf secondary-outputs
 
 # Tool invocations
 MiniProject\ _\ UART\ data\ stream\ reading.elf MiniProject\ _\ UART\ data\ stream\ reading.map: $(OBJS) $(USER_OBJS) C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL\ Based\ Projects\MiniProject\ _\ UART\ data\ stream\ reading\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "MiniProject _ UART data stream reading.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data stream reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data stream reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "MiniProject _ UART data stream reading.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\MiniProject _ UART data stream reading\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject _ UART data stream reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

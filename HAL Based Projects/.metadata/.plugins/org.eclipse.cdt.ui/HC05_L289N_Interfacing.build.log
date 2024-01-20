@@ -1,10 +1,17 @@
-21:08:27 **** Incremental Build of configuration Debug for project HC05_L289N_Interfacing ****
+19:29:58 **** Build of configuration Debug for project HC05_L289N_Interfacing ****
 make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "HC05_L289N_Interfacing.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\STM32CubeIDE\STM32_CubeIDE_Workspace\HAL Based Projects\HC05_L289N_Interfacing\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HC05_L289N_Interfacing.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HC05_L289N_Interfacing.elf
+ 
 arm-none-eabi-size  HC05_L289N_Interfacing.elf 
+arm-none-eabi-objdump -h -S HC05_L289N_Interfacing.elf  > "HC05_L289N_Interfacing.list"
    text	   data	    bss	    dec	    hex	filename
   25896	     20	   1884	  27800	   6c98	HC05_L289N_Interfacing.elf
 Finished building: default.size.stdout
  
+Finished building: HC05_L289N_Interfacing.list
+ 
 
-21:08:27 Build Finished. 0 errors, 0 warnings. (took 380ms)
+19:30:00 Build Finished. 0 errors, 0 warnings. (took 2s.228ms)
 

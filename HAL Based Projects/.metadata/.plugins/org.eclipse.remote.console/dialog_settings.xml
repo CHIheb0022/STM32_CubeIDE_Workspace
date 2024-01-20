@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="org.eclipse.remote.internal.console.TerminalConsoleSettingsDialog">
 		<item key="connectionType" value="org.eclipse.remote.serial.core.connectionType"/>
-		<item key="connectionName" value="STM32L476RG(9600)"/>
+		<item key="connectionName" value="STM32L476RG (115200)"/>
 		<item key="encoding" value="UTF-8"/>
 	</section>
 </section>

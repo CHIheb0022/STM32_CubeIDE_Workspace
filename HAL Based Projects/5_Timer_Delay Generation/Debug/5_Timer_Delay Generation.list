@@ -29,9 +29,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  0002003c  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00009d02  00000000  00000000  0002007f  2**0
+ 13 .debug_info   00009d04  00000000  00000000  0002007f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 0000179a  00000000  00000000  00029d81  2**0
+ 14 .debug_abbrev 0000179a  00000000  00000000  00029d83  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_aranges 00000b18  00000000  00000000  0002b520  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  000251d3  00000000  00000000  0002c8c2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000b8d8  00000000  00000000  00051a95  2**0
+ 18 .debug_line   0000b92b  00000000  00000000  00051a95  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000e8d86  00000000  00000000  0005d36d  2**0
+ 19 .debug_str    000e8d86  00000000  00000000  0005d3c0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00002ddc  00000000  00000000  001460f4  2**2
+ 20 .debug_frame  00002ddc  00000000  00000000  00146148  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000008d  00000000  00000000  00148ed0  2**0
+ 21 .debug_line_str 0000008d  00000000  00000000  00148f24  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -265,9 +265,9 @@ static void MX_TIM6_Init(void)
  8000292:	4b12      	ldr	r3, [pc, #72]	; (80002dc <MX_TIM6_Init+0x68>)
  8000294:	2200      	movs	r2, #0
  8000296:	609a      	str	r2, [r3, #8]
-  htim6.Init.Period = 1000;
+  htim6.Init.Period = 1000-1;
  8000298:	4b10      	ldr	r3, [pc, #64]	; (80002dc <MX_TIM6_Init+0x68>)
- 800029a:	f44f 727a 	mov.w	r2, #1000	; 0x3e8
+ 800029a:	f240 32e7 	movw	r2, #999	; 0x3e7
  800029e:	60da      	str	r2, [r3, #12]
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
  80002a0:	4b0e      	ldr	r3, [pc, #56]	; (80002dc <MX_TIM6_Init+0x68>)
@@ -685,6 +685,9 @@ void TIM6_DAC_IRQHandler(void)
  800043c:	2120      	movs	r1, #32
  800043e:	f04f 4090 	mov.w	r0, #1207959552	; 0x48000000
  8000442:	f000 fb8b 	bl	8000b5c <HAL_GPIO_TogglePin>
+   	 	 }
+  */
+
 
   /* USER CODE END TIM6_DAC_IRQn 0 */
   HAL_TIM_IRQHandler(&htim6);

@@ -7,4 +7,4 @@
 ../Core/Src/main.c:343:6:HAL_TIM_IC_CaptureCallback	6
 ../Core/Src/main.c:381:6:HCSR04_Read	1
 ../Core/Src/main.c:390:6:delay_us	2
-../Core/Src/main.c:401:6:Error_Handler	1
+../Core/Src/main.c:402:6:Error_Handler	1

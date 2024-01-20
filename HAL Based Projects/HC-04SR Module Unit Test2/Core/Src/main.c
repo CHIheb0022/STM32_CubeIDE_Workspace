@@ -131,7 +131,7 @@ int main(void)
 
 	HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);
 
-	HAL_Delay(50);
+	HAL_Delay(20);
   }
   /* USER CODE END 3 */
 }
@@ -391,6 +391,7 @@ void delay_us(uint16_t delay){
 	__HAL_TIM_SET_COUNTER(&htim6,0); // or set the CNT directly : TIM6->CNT = 0;
 	while (__HAL_TIM_GET_COUNTER(&htim6) < delay); // or : while (TIM6->CNT < delay);
 }
+
 
 /* USER CODE END 4 */
 

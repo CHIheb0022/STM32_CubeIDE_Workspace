@@ -1,4 +1,4 @@
-02:18:44 **** Incremental Build of configuration Debug for project Testing_BLE ****
+20:37:48 **** Incremental Build of configuration Debug for project Testing_BLE ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
@@ -31,11 +31,11 @@ Finished building target: Testing_BLE.elf
 arm-none-eabi-size  Testing_BLE.elf 
 arm-none-eabi-objdump -h -S Testing_BLE.elf  > "Testing_BLE.list"
    text	   data	    bss	    dec	    hex	filename
-  18884	    100	   2188	  21172	   52b4	Testing_BLE.elf
+  18888	    100	   2188	  21176	   52b8	Testing_BLE.elf
 Finished building: default.size.stdout
  
 Finished building: Testing_BLE.list
  
 
-02:18:46 Build Finished. 0 errors, 4 warnings. (took 1s.308ms)
+20:37:51 Build Finished. 0 errors, 4 warnings. (took 2s.481ms)
 

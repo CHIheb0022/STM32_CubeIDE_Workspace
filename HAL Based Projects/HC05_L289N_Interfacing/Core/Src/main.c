@@ -36,8 +36,8 @@
 #define in4 GPIO_PIN_3
 
 #define enA TIM_CHANNEL_2 // Left motor
-#define in3 GPIO_PIN_4
-#define in4 GPIO_PIN_3
+#define in1 GPIO_PIN_4
+#define in2 GPIO_PIN_3
 
 
 
@@ -88,7 +88,7 @@ uint32_t MAP(uint32_t au32_IN, uint32_t au32_INmin, uint32_t au32_INmax, uint32_
 
 uint16_t ADC_RES;
 uint16_t PWM_Value;
-uint8_t RX_BUFFER[Rx_len]={0,0,0};
+uint8_t RX_BUFFER[Rx_len]={0};
 uint16_t RX_index = 0;
 
 /* USER CODE END 0 */
@@ -394,13 +394,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_1|GPIO_PIN_2, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC1 PC2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2;
+  /*Configure GPIO pins : PC1 PC2 PC3 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
