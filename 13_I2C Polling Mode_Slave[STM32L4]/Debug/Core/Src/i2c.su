@@ -1,7 +1,0 @@
-../Core/Src/i2c.c:33:6:MX_I2C1_Init	8	static
-../Core/Src/i2c.c:76:6:HAL_I2C_MspInit	184	static
-../Core/Src/i2c.c:122:6:HAL_I2C_MspDeInit	16	static
-../Core/Src/i2c.c:152:13:HAL_I2C_ListenCpltCallback	16	static
-../Core/Src/i2c.c:158:13:HAL_I2C_AddrCallback	16	static
-../Core/Src/i2c.c:170:6:HAL_I2C_SlaveRxCpltCallback	16	static
-../Core/Src/i2c.c:175:6:HAL_I2C_ErrorCallback	16	static

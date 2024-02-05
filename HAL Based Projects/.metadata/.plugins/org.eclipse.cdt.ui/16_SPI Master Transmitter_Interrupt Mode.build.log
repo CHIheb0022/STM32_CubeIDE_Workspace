@@ -1,10 +1,10 @@
-01:00:34 **** Build of configuration Debug for project 16_SPI Master Transmitter_Interrupt Mode ****
+15:24:03 **** Build of configuration Debug for project 16_SPI Master Transmitter_Interrupt Mode ****
 make -j4 all 
-arm-none-eabi-size   16_SPI\ Master\ Transmitter_Interrupt\ Mode.elf 
+arm-none-eabi-size  16_SPI\ Master\ Transmitter_Interrupt\ Mode.elf 
    text	   data	    bss	    dec	    hex	filename
    8808	     36	   1668	  10512	   2910	16_SPI Master Transmitter_Interrupt Mode.elf
 Finished building: default.size.stdout
  
 
-01:00:34 Build Finished. 0 errors, 0 warnings. (took 490ms)
+15:24:04 Build Finished. 0 errors, 0 warnings. (took 859ms)
 
